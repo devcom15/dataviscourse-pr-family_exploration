@@ -1,13 +1,13 @@
 var map = L.map('mainmap').setView([40.758701, -111.876183], 11);
 mapLink = 
-      '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+      '<a href="https://openstreetmap.org">OpenStreetMap</a>';
 // L.tileLayer(
 //       'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //       attribution: '&copy; ' + mapLink + ' Contributors',
 //       maxZoom: 18,
 //       }).addTo(map);
 L.tileLayer(
-      'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 var m = new L.Marker([40.758701, -111.876183]);
 map.addLayer(m);
 var tooltip = d3.select("body")
