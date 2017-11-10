@@ -46,3 +46,8 @@
     float:left;
     padding:10%;
 }
+
+img:hover {
+    opacity: 0.6;
+    background-color: yellow;
+}
