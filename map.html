@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discovering Your Family</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <style type="text/css">
+        html,
+        body,
+        .map {
+            width: 200px;
+            height: 200px;
+            margin: 0;
+            padding: 0;
+            color: blue;
+        }
+        .d3-tip {
+    		/*line-height: 5;*/
+    		padding-left: 10px;
+    		padding-right: 10px;
+    		min-width: 400px;
+    		border-style: groove;
+    		/*padding: 12px;*/
+    		background: #FFFFFF;
+    		color: rgba(0, 0, 0, 0.8);
+    		border-radius: 10px;
+    		pointer-events: none;
+		}
+    </style>
+</head>
+<body>
+<div id="mainmap" class="map"></div>
+<div>
+	<svg width="500" height="400" id="barChart">
+		<g id="circle"></g>
+			<circle id="circ" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+	</svg>
+</div>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+<script type="application/javascript" src="js/map.js"></script>
+</body>
+</html>
