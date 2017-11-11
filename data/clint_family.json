@@ -170,7 +170,7 @@
     "gender": "M",
     "city": "Taylorsville",
     "state": "UT",
-    "spouse": "tamarar74",
+    "spouse": "tamaraa74",
     "familypath":"data/photos/dan_tamara_achter_family.jpg",
     "children": [
       "colea96",
@@ -501,13 +501,13 @@
     "city": "Layton",
     "state": "UT",
     "spouse": "lymanr48",
-    "familypath":null,
+    "familypath":"data/photos/lyman_mary_rollins.jpg",
     "children": [
       "clintonr87",
       "johnr83",
       "benjaminr78",
       "spencerr77",
-      "tamarar74",
+      "tamaraa74",
       "nathanialr73",
       "annar72"
     ]
@@ -522,13 +522,13 @@
     "city": "Layton",
     "state": "UT",
     "spouse": "maryr49",
-    "familypath":null,
+    "familypath":"data/photos/lyman_mary_rollins.jpg",
     "children": [
       "clintonr87",
       "johnr83",
       "benjaminr78",
       "spencerr77",
-      "tamarar74",
+      "tamaraa74",
       "nathanialr73",
       "annar72"
     ]
@@ -612,7 +612,7 @@
     "children": []
   },
   {
-    "id": "nancyr",
+    "id": "nancyr45",
     "firstname": "Nancy",
     "lastname": "Rollins",
     "birthdate": 1945,
