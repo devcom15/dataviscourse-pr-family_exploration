@@ -1,5 +1,43 @@
-The receiving team must take notes on the comments. Also, write down the names of the group members that gave the feedback. Either during the session, or afterwards when you meet with your team, analyze the feedback and explain how you will address it.
+The receiving team must take notes on the comments. Also, write down the names of the group members that gave the feedback.
+Either during the session, or afterwards when you meet with your team, analyze the feedback and explain how you will address it.
 
 After the session, also briefly comment on the quality of the feedback you received. Was it fair? Was it helpful?
 
-Submit this exercise by committing it to your project repository before the Milestone 1 deadline. Name your file “feedback_exercise”. You can use Markdown, text, or submit a pdf.
+Submit this exercise by committing it to your project repository before the Milestone 1 deadline.
+Name your file “feedback_exercise”. You can use Markdown, text, or submit a pdf.
+
+
+We worked with Anmol Ahuja's group. (Neglected to aquire his other team members names, my apologies).
+
+Overall, we thought the feedback we received was good, and appreciate the teams comments. We did make some changes
+and beleive it will lead to a better result.
+
+The Feedback we received primarly focused on 2 areas, design and data.
+
+Design -
+    Feedback:
+        The reviewing group expressed that we should attempt to try something more diverse with our basic design for the
+        family tree outside of replicating what we had in class. They recommended we work on our own representation,
+        so that it would look both better and provide additional functionality that would be absent from a copy/paste
+        from the fifa tree.
+
+    Our Teams Thoughts:
+        We completely agree, and determined that we would build our own custom tree rather than utilize the functinoaly
+        built into D3. In particular, we want to be able to highlight some more localized information about
+        generations, spouses, and some interesting attached statistics.
+
+Data -
+    Feedback:
+        The reviewing group expressed a concern that we perhaps didn't have enough dimensions in our features to draw
+        many intersting parralels, and that we might want to work on what we have to create some aggregates to
+        show some other meaningful relationships.
+
+
+    Our Teams Thoughts:
+        Once again, we agree. We would like to provide more information to the users of our system. To this end,
+        we are thinking about useful/meaningful ways to show things like average lifetimes, male/female ratios,
+        and significant life events. (If Possible.).
+
+
+
+
