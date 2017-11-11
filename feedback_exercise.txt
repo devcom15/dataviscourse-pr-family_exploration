@@ -1,0 +1,5 @@
+The receiving team must take notes on the comments. Also, write down the names of the group members that gave the feedback. Either during the session, or afterwards when you meet with your team, analyze the feedback and explain how you will address it.
+
+After the session, also briefly comment on the quality of the feedback you received. Was it fair? Was it helpful?
+
+Submit this exercise by committing it to your project repository before the Milestone 1 deadline. Name your file “feedback_exercise”. You can use Markdown, text, or submit a pdf.

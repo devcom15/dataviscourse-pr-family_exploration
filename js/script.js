@@ -2,8 +2,11 @@ d3.json('data/clint_family.json',function(data){
     let idMap = {};
     let parentMap = {}
 
+    let idMapArray = []
+
     data.forEach(function(d) {
         idMap[d.id] = d;
+        idMapArray.push(d);
         d.children.forEach(function(child) {
             if(!parentMap[child]){
                 parentMap[child] = [];
@@ -13,6 +16,7 @@ d3.json('data/clint_family.json',function(data){
     });
 
     let famView = new FamilyView(idMap,parentMap);
+    let treeView = new tree(idMapArray, parentMap);
 });
 
 /*
