@@ -2,7 +2,7 @@ class FamilyView {
     constructor(idMap, parentMap) {
         this.idMap = idMap;
         this.parentMap = parentMap;
-        this.rootPath = "/dataviscourse-pr-family_exploration/data/photos/";
+        this.rootPath = "/data/photos/";
         this.altBoy = this.rootPath + "boy_alt.jpg";
         this.altGirl = this.rootPath + "girl_alt.jpg";
         this.altFamily = this.rootPath + "family_alt.jpg";
