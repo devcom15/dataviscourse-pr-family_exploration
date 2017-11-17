@@ -8,6 +8,8 @@
     "gender": "M",
     "city": "Salt Lake City",
     "state": "UT",
+    "latitude": "40.758701",
+    "longitude": "-111.876183",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -21,6 +23,8 @@
     "gender": "M",
     "city": "Clearfield",
     "state": "UT",
+    "latitude": "41.096778",
+    "longitude": "-112.017469",
     "spouse": "laurier88",
     "familypath":"data/photos/john_laurie_rollins_family.jpg",
     "children": [
@@ -37,6 +41,8 @@
     "gender": "M",
     "city": "Lehi",
     "state": "UT",
+    "latitude": "40.391617",
+    "longitude": "-111.850769",
     "spouse": "nicoler80",
     "familypath":"data/photos/ben_niki_rollins_family.jpg",
     "children": [
@@ -54,6 +60,8 @@
     "gender": "M",
     "city": "Syracuse",
     "state": "UT",
+    "latitude": "41.087627",
+    "longitude": "-112.066893",
     "spouse": "melanier77",
     "familypath":"data/photos/spencer_melanie_rollins_family.jpg",
     "children": [
@@ -72,6 +80,8 @@
     "gender": "F",
     "city": "Taylorsville",
     "state": "UT",
+    "latitude": "40.656955",
+    "longitude": "-111.949344",
     "spouse": "daniela70",
     "familypath":"data/photos/dan_tamara_achter_family.jpg",
     "children": [
@@ -90,6 +100,8 @@
     "gender": "M",
     "city": "New York City",
     "state": "NY",
+    "latitude": "40.730610",
+    "longitude": "-73.935242",
     "spouse": "kelyr76",
     "familypath":null,
     "children": []
@@ -102,6 +114,8 @@
     "hobby": "Writing",
     "gender": "F",
     "city": "Layton",
+    "latitude": "41.077423",
+    "longitude": "-111.960727",
     "state": "UT",
     "spouse": null,
     "familypath":"data/photos/anna_rollins_family.jpg",
@@ -119,6 +133,8 @@
     "gender": "F",
     "city": "Clearfield",
     "state": "UT",
+    "latitude": "41.096778",
+    "longitude": "-112.017469",
     "spouse": "johnr83",
     "familypath":"data/photos/john_laurie_rollins_family.jpg",
     "children": [
@@ -135,6 +151,8 @@
     "gender": "F",
     "city": "Lehi",
     "state": "UT",
+    "latitude": "40.391617",
+    "longitude": "-111.850769",
     "spouse": "benr78",
     "familypath":"data/photos/ben_niki_rollins_family.jpg",
     "children": [
@@ -152,6 +170,8 @@
     "gender": "F",
     "city": "Syracuse",
     "state": "UT",
+    "latitude": "41.087627",
+    "longitude": "-112.066893",
     "spouse": "spencerr77",
     "familypath":"data/photos/spencer_melanie_rollins_family.jpg",
     "children": [
@@ -170,6 +190,8 @@
     "gender": "M",
     "city": "Taylorsville",
     "state": "UT",
+    "latitude": "40.656955",
+    "longitude": "-111.949344",
     "spouse": "tamaraa74",
     "familypath":"data/photos/dan_tamara_achter_family.jpg",
     "children": [
@@ -188,6 +210,8 @@
     "gender": "F",
     "city": "New York City",
     "state": "NY",
+    "latitude": "40.730610",
+    "longitude": "-73.935242",
     "spouse": "nathanialr73",
     "familypath":null,
     "children": []
@@ -201,6 +225,8 @@
     "gender": "M",
     "city": "San Diego",
     "state": "CA",
+    "latitude": "32.715736",
+    "longitude": "-117.161087",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -214,6 +240,8 @@
     "gender": "F",
     "city": "San Diego",
     "state": "CA",
+    "latitude": "32.715736",
+    "longitude": "-117.161087",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -227,6 +255,8 @@
     "gender": "M",
     "city": "Taylorsville",
     "state": "UT",
+    "latitude": "40.656955",
+    "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -240,6 +270,8 @@
     "gender": "F",
     "city": "Taylorsville",
     "state": "UT",
+    "latitude": "40.656955",
+    "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -253,6 +285,8 @@
     "gender": "M",
     "city": "Taylorsville",
     "state": "UT",
+    "latitude": "40.656955",
+    "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -266,6 +300,8 @@
     "gender": "F",
     "city": "Taylorsville",
     "state": "UT",
+    "latitude": "40.656955",
+    "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -279,6 +315,8 @@
     "gender": "M",
     "city": "Syracuse",
     "state": "UT",
+    "latitude": "41.087627",
+    "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -292,6 +330,8 @@
     "gender": "F",
     "city": "Syracuse",
     "state": "UT",
+    "latitude": "41.087627",
+    "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -305,6 +345,8 @@
     "gender": "M",
     "city": "Syracuse",
     "state": "UT",
+    "latitude": "41.087627",
+    "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -318,6 +360,8 @@
     "gender": "M",
     "city": "Syracuse",
     "state": "UT",
+    "latitude": "41.087627",
+    "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -331,6 +375,8 @@
     "gender": "M",
     "city": "Lehi",
     "state": "UT",
+    "latitude": "40.391617",
+    "longitude": "-111.850769",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -344,6 +390,8 @@
     "gender": "M",
     "city": "Lehi",
     "state": "UT",
+    "latitude": "40.391617",
+    "longitude": "-111.850769",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -357,6 +405,8 @@
     "gender": "F",
     "city": "Lehi",
     "state": "UT",
+    "latitude": "40.391617",
+    "longitude": "-111.850769",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -370,6 +420,8 @@
     "gender": "F",
     "city": "Clearfield",
     "state": "UT",
+    "latitude": "41.096778",
+    "longitude": "-112.017469",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -383,6 +435,8 @@
     "gender": "M",
     "city": "Clearfield",
     "state": "UT",
+    "latitude": "41.096778",
+    "longitude": "-112.017469",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -396,6 +450,8 @@
     "gender": "F",
     "city": "highland",
     "state": "UT",
+    "latitude": "40.427062",
+    "longitude": "-111.795474",
     "spouse": "henrys35",
     "familypath":null,
     "children": []
@@ -408,6 +464,8 @@
     "hobby": "Bowling",
     "gender": "M",
     "city": "Pleasant Grove",
+    "latitude": "40.371423",
+    "longitude": "-111.741117",
     "state": "UT",
     "spouse": "adas39",
     "familypath":null,
@@ -422,6 +480,8 @@
     "gender": "M",
     "city": "Vancouver",
     "state": "WA",
+    "latitude": "45.6387281",
+    "longitude": "-122.6614861",
     "spouse": "annp45",
     "familypath":null,
     "children": []
@@ -435,6 +495,8 @@
     "gender": "F",
     "city": "Vancouver",
     "state": "WA",
+    "latitude": "45.6387281",
+    "longitude": "-122.6614861",
     "spouse": "donp41",
     "familypath":null,
     "children": []
@@ -448,6 +510,8 @@
     "gender": "M",
     "city": null,
     "state": "UT",
+    "latitude": "40.758701",
+    "longitude": "-111.876183",
     "spouse": "lloydannep44",
     "familypath":null,
     "children": []
@@ -461,6 +525,8 @@
     "gender": "F",
     "city": "Helotes",
     "state": "TX",
+    "latitude": "29.578006",
+    "longitude": "-98.689745",
     "spouse": "boydp43",
     "familypath":null,
     "children": []
@@ -474,6 +540,8 @@
     "gender": "F",
     "city": "Layton",
     "state": "UT",
+    "latitude": "41.077423",
+    "longitude": "-111.960727",
     "spouse": "richardr49",
     "familypath":null,
     "children": []
@@ -487,6 +555,8 @@
     "gender": "M",
     "city": "Layton",
     "state": "UT",
+    "latitude": "41.077423",
+    "longitude": "-111.960727",
     "spouse": "evelynr47",
     "familypath":null,
     "children": []
@@ -500,6 +570,8 @@
     "gender": "F",
     "city": "Layton",
     "state": "UT",
+    "latitude": "41.077423",
+    "longitude": "-111.960727",
     "spouse": "lymanr48",
     "familypath":"data/photos/lyman_mary_rollins.jpg",
     "children": [
@@ -521,6 +593,8 @@
     "gender": "M",
     "city": "Layton",
     "state": "UT",
+    "latitude": "41.077423",
+    "longitude": "-111.960727",
     "spouse": "maryr49",
     "familypath":"data/photos/lyman_mary_rollins.jpg",
     "children": [
@@ -542,6 +616,8 @@
     "gender": "M",
     "city": "Clinton",
     "state": "UT",
+    "latitude": "41.13874",
+    "longitude": "-112.066417",
     "spouse": "suzannep55",
     "familypath":null,
     "children": []
@@ -555,6 +631,8 @@
     "gender": "F",
     "city": "Clinton",
     "state": "UT",
+    "latitude": "41.13874",
+    "longitude": "-112.066417",
     "spouse": "davidp54",
     "familypath":null,
     "children": []
@@ -568,6 +646,8 @@
     "gender": "M",
     "city": "Phoenix",
     "state": "AZ",
+    "latitude": "33.572162",
+    "longitude": "-112.087966",
     "spouse": "sharonr44",
     "familypath":null,
     "children": []
@@ -581,6 +661,8 @@
     "gender": "F",
     "city": "Phoenix",
     "state": "AZ",
+    "latitude": "33.572162",
+    "longitude": "-112.087966",
     "spouse": "bradleyr41",
     "familypath":null,
     "children": []
@@ -594,6 +676,8 @@
     "gender": "M",
     "city": "Cave Creek",
     "state": "AZ",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": "francesr45",
     "familypath":null,
     "children": []
@@ -607,6 +691,8 @@
     "gender": "F",
     "city": "Cave Creek",
     "state": "AX",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": "brentr43",
     "familypath":null,
     "children": []
@@ -620,6 +706,8 @@
     "gender": "F",
     "city": "Phoenix",
     "state": "AX",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -633,6 +721,8 @@
     "gender": "F",
     "city": "Phoenix",
     "state": "AZ",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": null,
     "familypath":null,
     "children": []
@@ -646,6 +736,8 @@
     "gender": "F",
     "city": "Phoenix",
     "state": "AZ",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": "williamm48",
     "familypath":null,
     "children": []
@@ -659,6 +751,8 @@
     "gender": "M",
     "city": "Phoenix",
     "state": "AZ",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": "stormiem60",
     "familypath":null,
     "children": []
@@ -672,6 +766,8 @@
     "gender": "M",
     "city": "Phoenix",
     "state": "AZ",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": "loisr22",
     "familypath":null,
     "children": [
@@ -692,6 +788,8 @@
     "gender": "F",
     "city": "Phoenix",
     "state": "AZ",
+    "latitude": "33.836205",
+    "longitude": "-111.982191",
     "spouse": "lymanr20",
     "familypath":null,
     "children": [
@@ -712,6 +810,8 @@
     "gender": "F",
     "city": "Layton",
     "state": "UT",
+    "latitude": "41.077423",
+    "longitude": "-111.960727",
     "spouse": "irvinp11",
     "familypath":null,
     "children": [
@@ -732,6 +832,8 @@
     "gender": "M",
     "city": "Clearfield",
     "state": "UT",
+    "latitude": "41.096778",
+    "longitude": "-112.017469",
     "spouse": "winifredp13",
     "familypath":null,
     "children": [
