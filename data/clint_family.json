@@ -12,7 +12,8 @@
     "longitude": "-111.876183",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "johnr83",
@@ -26,11 +27,12 @@
     "latitude": "41.096778",
     "longitude": "-112.017469",
     "spouse": "laurier88",
-    "familypath":"data/photos/john_laurie_rollins_family.jpg",
+    "familypath":"john_laurie_rollins_family.jpg",
     "children": [
       "rachelr14",
       "porterr16"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "benjaminr78",
@@ -44,12 +46,13 @@
     "latitude": "40.391617",
     "longitude": "-111.850769",
     "spouse": "nicoler80",
-    "familypath":"data/photos/ben_niki_rollins_family.jpg",
+    "familypath":"ben_niki_rollins_family.jpg",
     "children": [
       "luker04",
       "calebr06",
       "gretar09"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "spencerr77",
@@ -63,13 +66,14 @@
     "latitude": "41.087627",
     "longitude": "-112.066893",
     "spouse": "melanier77",
-    "familypath":"data/photos/spencer_melanie_rollins_family.jpg",
+    "familypath":"spencer_melanie_rollins_family.jpg",
     "children": [
       "talmager00",
       "leiar02",
       "ammonr05",
       "peterr08"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "tamaraa74",
@@ -83,13 +87,14 @@
     "latitude": "40.656955",
     "longitude": "-111.949344",
     "spouse": "daniela70",
-    "familypath":"data/photos/dan_tamara_achter_family.jpg",
+    "familypath":"dan_tamara_achter_family.jpg",
     "children": [
       "colea96",
       "shayleea00",
       "silasa12",
       "macya14"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "nathanialr73",
@@ -104,7 +109,8 @@
     "longitude": "-73.935242",
     "spouse": "kelyr76",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "annar72",
@@ -118,11 +124,12 @@
     "longitude": "-111.960727",
     "state": "UT",
     "spouse": null,
-    "familypath":"data/photos/anna_rollins_family.jpg",
+    "familypath":"anna_rollins_family.jpg",
     "children": [
       "cameronc98",
       "miriamc01"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "laurier88",
@@ -136,11 +143,12 @@
     "latitude": "41.096778",
     "longitude": "-112.017469",
     "spouse": "johnr83",
-    "familypath":"data/photos/john_laurie_rollins_family.jpg",
+    "familypath":"john_laurie_rollins_family.jpg",
     "children": [
       "rachelr14",
       "porterr16"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "nicoler80",
@@ -154,12 +162,13 @@
     "latitude": "40.391617",
     "longitude": "-111.850769",
     "spouse": "benr78",
-    "familypath":"data/photos/ben_niki_rollins_family.jpg",
+    "familypath":"ben_niki_rollins_family.jpg",
     "children": [
       "luker04",
       "calebr06",
       "gretar09"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "melanier77",
@@ -173,13 +182,14 @@
     "latitude": "41.087627",
     "longitude": "-112.066893",
     "spouse": "spencerr77",
-    "familypath":"data/photos/spencer_melanie_rollins_family.jpg",
+    "familypath":"spencer_melanie_rollins_family.jpg",
     "children": [
       "talmager00",
       "leiar02",
       "ammonr05",
       "peterr08"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "daniela70",
@@ -193,13 +203,14 @@
     "latitude": "40.656955",
     "longitude": "-111.949344",
     "spouse": "tamaraa74",
-    "familypath":"data/photos/dan_tamara_achter_family.jpg",
+    "familypath":"dan_tamara_achter_family.jpg",
     "children": [
       "colea96",
       "shayleea00",
       "silasa12",
       "macya14"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "kelyr76",
@@ -214,7 +225,8 @@
     "longitude": "-73.935242",
     "spouse": "nathanialr73",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "cameronc98",
@@ -229,7 +241,8 @@
     "longitude": "-117.161087",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "miriamc01",
@@ -244,7 +257,8 @@
     "longitude": "-117.161087",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "colea96",
@@ -259,7 +273,8 @@
     "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "shayleea00",
@@ -274,7 +289,8 @@
     "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "silasa12",
@@ -289,7 +305,8 @@
     "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "macya14",
@@ -304,7 +321,8 @@
     "longitude": "-111.949344",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "talmager00",
@@ -319,7 +337,8 @@
     "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "leiar02",
@@ -334,7 +353,8 @@
     "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "ammonr05",
@@ -349,7 +369,8 @@
     "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "peterr08",
@@ -364,7 +385,8 @@
     "longitude": "-112.066893",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "luker04",
@@ -379,7 +401,8 @@
     "longitude": "-111.850769",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "calebr06",
@@ -394,7 +417,8 @@
     "longitude": "-111.850769",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "gretar09",
@@ -409,7 +433,8 @@
     "longitude": "-111.850769",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "rachelr14",
@@ -424,7 +449,8 @@
     "longitude": "-112.017469",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "porterr16",
@@ -439,7 +465,8 @@
     "longitude": "-112.017469",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "adas39",
@@ -453,8 +480,9 @@
     "latitude": "40.427062",
     "longitude": "-111.795474",
     "spouse": "henrys35",
-    "familypath":null,
-    "children": []
+    "familypath":"hank_ada_family.jpg",
+    "children": [],
+    "death": 2011
   },
   {
     "id": "henrys35",
@@ -469,7 +497,8 @@
     "state": "UT",
     "spouse": "adas39",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "donp41",
@@ -483,8 +512,9 @@
     "latitude": "45.6387281",
     "longitude": "-122.6614861",
     "spouse": "annp45",
-    "familypath":null,
-    "children": []
+    "familypath":"don_ann_family.jpg",
+    "children": [],
+    "death": null
   },
   {
     "id": "annp45",
@@ -499,7 +529,8 @@
     "longitude": "-122.6614861",
     "spouse": "donp41",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "boydp43",
@@ -513,8 +544,9 @@
     "latitude": "40.758701",
     "longitude": "-111.876183",
     "spouse": "lloydannep44",
-    "familypath":null,
-    "children": []
+    "familypath":"boyd_loy_family.jpg",
+    "children": [],
+    "death": 2000
   },
   {
     "id": "lloydannep44",
@@ -529,7 +561,8 @@
     "longitude": "-98.689745",
     "spouse": "boydp43",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "evelynr47",
@@ -543,8 +576,9 @@
     "latitude": "41.077423",
     "longitude": "-111.960727",
     "spouse": "richardr49",
-    "familypath":null,
-    "children": []
+    "familypath":"richard_evelyn_family.jpg",
+    "children": [],
+    "death": null
   },
   {
     "id": "richardr49",
@@ -559,7 +593,8 @@
     "longitude": "-111.960727",
     "spouse": "evelynr47",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "maryr49",
@@ -573,7 +608,7 @@
     "latitude": "41.077423",
     "longitude": "-111.960727",
     "spouse": "lymanr48",
-    "familypath":"data/photos/lyman_mary_rollins.jpg",
+    "familypath":"lyman_mary_rollins.jpg",
     "children": [
       "clintonr87",
       "johnr83",
@@ -582,7 +617,8 @@
       "tamaraa74",
       "nathanialr73",
       "annar72"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "lymanr48",
@@ -596,7 +632,7 @@
     "latitude": "41.077423",
     "longitude": "-111.960727",
     "spouse": "maryr49",
-    "familypath":"data/photos/lyman_mary_rollins.jpg",
+    "familypath":"lyman_mary_rollins.jpg",
     "children": [
       "clintonr87",
       "johnr83",
@@ -605,7 +641,8 @@
       "tamaraa74",
       "nathanialr73",
       "annar72"
-    ]
+    ],
+    "death": null
   },
   {
     "id": "davidp54",
@@ -619,8 +656,9 @@
     "latitude": "41.13874",
     "longitude": "-112.066417",
     "spouse": "suzannep55",
-    "familypath":null,
-    "children": []
+    "familypath":"david_suzanne_family.jpg",
+    "children": [],
+    "death": null
   },
   {
     "id": "suzannep55",
@@ -635,7 +673,8 @@
     "longitude": "-112.066417",
     "spouse": "davidp54",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "bradleyr41",
@@ -650,7 +689,8 @@
     "longitude": "-112.087966",
     "spouse": "sharonr44",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": 2006
   },
   {
     "id": "sharonr44",
@@ -665,7 +705,8 @@
     "longitude": "-112.087966",
     "spouse": "bradleyr41",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "brentr43",
@@ -680,7 +721,8 @@
     "longitude": "-111.982191",
     "spouse": "francesr45",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "francesr45",
@@ -690,12 +732,13 @@
     "hobby": "Crafts",
     "gender": "F",
     "city": "Cave Creek",
-    "state": "AX",
+    "state": "AZ",
     "latitude": "33.836205",
     "longitude": "-111.982191",
     "spouse": "brentr43",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "nancyr45",
@@ -705,12 +748,13 @@
     "hobby": "Education",
     "gender": "F",
     "city": "Phoenix",
-    "state": "AX",
+    "state": "AZ",
     "latitude": "33.836205",
     "longitude": "-111.982191",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "roxanner54",
@@ -725,7 +769,8 @@
     "longitude": "-111.982191",
     "spouse": null,
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": 2005
   },
   {
     "id": "stormiem60",
@@ -740,7 +785,8 @@
     "longitude": "-111.982191",
     "spouse": "williamm48",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "williamm48",
@@ -755,7 +801,8 @@
     "longitude": "-111.982191",
     "spouse": "stormiem60",
     "familypath":null,
-    "children": []
+    "children": [],
+    "death": null
   },
   {
     "id": "lymanr20",
@@ -769,7 +816,7 @@
     "latitude": "33.836205",
     "longitude": "-111.982191",
     "spouse": "loisr22",
-    "familypath":null,
+    "familypath":"lyman_lois_rollins_family.jpg",
     "children": [
       "bradleyr41",
       "brentr43",
@@ -777,7 +824,8 @@
       "lymanr48",
       "roxanner54",
       "stormiem60"
-    ]
+    ],
+    "death": 2012
   },
   {
     "id": "loisr22",
@@ -799,7 +847,8 @@
       "lymanr48",
       "roxanner54",
       "stormiem60"
-    ]
+    ],
+    "death": 2008
   },
   {
     "id": "winifredp13",
@@ -813,7 +862,7 @@
     "latitude": "41.077423",
     "longitude": "-111.960727",
     "spouse": "irvinp11",
-    "familypath":null,
+    "familypath":"irvin_winifred_family.jpg",
     "children": [
       "adas39",
       "donp41",
@@ -821,7 +870,8 @@
       "evelynr47",
       "maryr49",
       "davidp54"
-    ]
+    ],
+    "death": 2010
   },
   {
     "id": "irvinp11",
@@ -835,7 +885,7 @@
     "latitude": "41.096778",
     "longitude": "-112.017469",
     "spouse": "winifredp13",
-    "familypath":null,
+    "familypath":"irvin_winifred_family.jpg",
     "children": [
       "adas39",
       "donp41",
@@ -843,6 +893,135 @@
       "evelynr47",
       "maryr49",
       "davidp54"
-    ]
+    ],
+    "death": 1994
+  },
+  {
+    "id":"jamesr97",
+    "firstname":"James",
+    "lastname":"Rollins",
+    "birthdate":1897,
+    "hobby":"Work",
+    "gender":"M",
+    "city":"Phoenix",
+    "state":"AZ",
+    "latitude":"33.448377",
+    "longitude":"-112.074037",
+    "spouse":"bernicer98",
+    "familypath":null,
+    "children":["lymanr20"],
+    "death":1986
+  },
+  {
+    "id":"bernicer98",
+    "firstname":"Bernice",
+    "lastname":"Rollins",
+    "birthdate":1898,
+    "hobby":"Cleaning",
+    "gender":"F",
+    "city":"Fort Bridger",
+    "state":"WY",
+    "latitude":"41.318473",
+    "longitude":"-110.388601",
+    "spouse":"jamesr97",
+    "familypath":null,
+    "children":["lymanr20"],
+    "death":1940
+  },
+  {
+    "id":"clintonb95",
+    "firstname":"Clinton",
+    "lastname":"Bradshaw",
+    "birthdate":1985,
+    "hobby":"Horses",
+    "gender":"M",
+    "city":"Lyman",
+    "state":"Wyoming",
+    "latitude":"41.327451",
+    "longitude":"-110.292933",
+    "spouse":"vernab95",
+    "familypath":null,
+    "children":["loisr22"],
+    "death":1984
+  },
+  {
+    "id":"vernab95",
+    "firstname":"Verna",
+    "lastname":"Bradshaw",
+    "birthdate":1895,
+    "hobby":"Dance",
+    "gender":"F",
+    "city":"Green River",
+    "state":"Wyoming",
+    "latitude":"41.528576",
+    "longitude":"-109.466246",
+    "spouse":"clintonb95",
+    "familypath":null,
+    "children":["loisr22"],
+    "death":1997
+  },
+  {
+    "id":"levip66",
+    "firstname":"Levi",
+    "lastname":"Pearson",
+    "birthdate":1866,
+    "hobby":"Family",
+    "gender":"M",
+    "city":"Oakley",
+    "state":"UT",
+    "latitude":"40.714672",
+    "longitude":"-111.300744",
+    "spouse":"charlottep76",
+    "familypath":null,
+    "children":["irvinp11"],
+    "death":1943
+  },
+  {
+    "id":"charlottep76",
+    "firstname":"Charlotte",
+    "lastname":"Pearson",
+    "birthdate":1876,
+    "hobby":"Sewing",
+    "gender":"F",
+    "city":"Oakley",
+    "state":"UT",
+    "latitude":"40.714672",
+    "longitude":"-111.300744",
+    "spouse":"levip66",
+    "familypath":null,
+    "children":["irvinp11"],
+    "death":1911
+  },
+  {
+    "id":"johns71",
+    "firstname":"John",
+    "lastname":"Smith",
+    "birthdate":1971,
+    "hobby":"Food",
+    "gender":"M",
+    "city":"Salt Lake City",
+    "state":"UT",
+    "latitude":"40.760779",
+    "longitude":"-111.891047",
+    "spouse":"loiss72",
+    "familypath":null,
+    "children":["winifredp13"],
+    "death":1936
+  },
+  {
+    "id":"loiss72",
+    "firstname":"Lois",
+    "lastname":"Smith",
+    "birthdate":1872,
+    "hobby":"Writing",
+    "gender":"F",
+    "city":"Salt Lake City",
+    "state":"UT",
+    "latitude":"40.760779",
+    "longitude":"-111.891047",
+    "spouse":"johns71",
+    "familypath":null,
+    "children":["winifredp13"],
+    "death":1949
   }
 ]

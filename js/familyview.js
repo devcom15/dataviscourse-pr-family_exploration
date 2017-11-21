@@ -3,6 +3,9 @@ class FamilyView {
         this.idMap = idMap;
         this.parentMap = parentMap;
         this.rootPath = "/data/photos/";
+        if(!this.imageExists("clintonr87")) {
+            this.rootPath = "/dataviscourse-pr-family_exploration" + this.rootPath;
+        }
         this.altBoy = this.rootPath + "boy_alt.jpg";
         this.altGirl = this.rootPath + "girl_alt.jpg";
         this.altFamily = this.rootPath + "family_alt.jpg";
@@ -22,7 +25,7 @@ class FamilyView {
         if(root.spouse || root.children.length > 0) {
             if(root.familypath) {
                 middle.append("img")
-                    .attr("src",root.familypath)
+                    .attr("src",self.rootPath + root.familypath)
             } else {
                 middle.append("img")
                     .attr("src",self.rootPath + id + ".jpg");
@@ -84,7 +87,7 @@ class FamilyView {
         left.append("img")
             .attr("src", function() {
                 if(parent.familypath) {
-                    return parent.familypath;
+                    return self.rootPath + parent.familypath;
                 }
                 else {
                     return self.altFamily;
@@ -101,7 +104,7 @@ class FamilyView {
         left.append("img")
             .attr("src", function() {
                 if(parent.familypath) {
-                    return parent.familypath;
+                    return self.rootPath + parent.familypath;
                 }
                 else {
                     return self.altFamily;
