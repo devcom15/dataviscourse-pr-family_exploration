@@ -16,7 +16,7 @@ d3.json('data/clint_family.json',function(data){
     });
 
     let famView = new FamilyView(idMap,parentMap);
-    let treeView = new tree(idMapArray, parentMap);
+    //let treeView = new tree(idMapArray, parentMap);
 });
 
 /*

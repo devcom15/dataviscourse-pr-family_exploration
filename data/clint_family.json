@@ -108,7 +108,7 @@
     "latitude": "40.730610",
     "longitude": "-73.935242",
     "spouse": "kelyr76",
-    "familypath":null,
+    "familypath":"nate_kely_family.jpg",
     "children": [],
     "death": null
   },
@@ -224,7 +224,7 @@
     "latitude": "40.730610",
     "longitude": "-73.935242",
     "spouse": "nathanialr73",
-    "familypath":null,
+    "familypath":"nate_kely_family.jpg",
     "children": [],
     "death": null
   },
@@ -996,7 +996,7 @@
     "id":"johns71",
     "firstname":"John",
     "lastname":"Smith",
-    "birthdate":1971,
+    "birthdate":1871,
     "hobby":"Food",
     "gender":"M",
     "city":"Salt Lake City",
