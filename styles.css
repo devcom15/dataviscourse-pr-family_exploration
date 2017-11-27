@@ -82,7 +82,7 @@ img:hover {
 }
 
 .brush .selection {
-    fill-opacity: .5;
+    fill-opacity: .10;
 }
 
 .generationFrame{
@@ -96,4 +96,9 @@ img:hover {
     fill-opacity: .80;
     border-width: 1px;
     border-color: #a3a3a3;
+}
+
+.line {
+    fill: none;
+    stroke-width: 1px;
 }
