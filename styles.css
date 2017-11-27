@@ -26,33 +26,33 @@
     width:80%;
     height:40%;
     float:left;
-    padding:10%;
+    margin:10%;
 }
 
 #right > img {
     width:80%;
     height:40%;
     float:left;
-    padding:10%;
+    margin:10%;
 }
 
 #middle > img {
     width:80%;
     height:80%;
     float:left;
-    padding:10%;
+    margin:10%;
 }
 
 #bottom > img {
     width:150px;
     height:150px;
     float:left;
-    padding:20px;
+    margin:20px;
 }
 
 img:hover {
     opacity: 0.6;
-    background-color: yellow;
+    cursor:pointer;
 }
 
 #bar-chart {
@@ -97,3 +97,6 @@ img:hover {
     border-width: 1px;
     border-color: #a3a3a3;
 }
+ body {
+     background-color: lightgrey;
+ }

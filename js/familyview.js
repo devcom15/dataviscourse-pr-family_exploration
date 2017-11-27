@@ -21,6 +21,7 @@ class FamilyView {
         let middle = d3.select("#middle");
         let bottom = d3.select("#bottom");
         let left = d3.select("#left");
+        let right = d3.select("#right");
 
         if(root.spouse || root.children.length > 0) {
             if(root.familypath) {
@@ -42,24 +43,56 @@ class FamilyView {
                         });
                 })
             }
-            console.log("id is " + id);
-            if(this.parentMap[id]) {
-                let p = this.idMap[this.parentMap[id][0]];
-                if(root.gender == "M") {
-                    this.addLeftFamily(p);
-                } else {
-                    this.addrightFamily(p);
+            if(root.gender == "M") {
+                if (this.parentMap[id]) {
+                    let p = this.idMap[this.parentMap[id][0]];
+                    self.addLeftFamily(p);
+                }
+                left.append("img")
+                    .attr("src", self.rootPath + id + ".jpg");
+                if(root.spouse) {
+                    if(this.parentMap[root.spouse]) {
+                        let p = this.idMap[this.parentMap[root.spouse][0]];
+                        self.addrightFamily(p)
+                    }
+                    right.append("img")
+                        .attr("src", self.rootPath + root.spouse + ".jpg");
+                    if(!this.parentMap[root.spouse]) {
+                        right.select("img")
+                            .style("margin-top","110%")
+                    }
+                }
+            } else {
+                if (this.parentMap[id]) {
+                    let p = this.idMap[this.parentMap[id][0]];
+                    self.addrightFamily(p);
+                }
+                right.append("img")
+                    .attr("src", self.rootPath + id + ".jpg");
+                if(root.spouse) {
+                    if(this.parentMap[root.spouse]) {
+                        let p = this.idMap[this.parentMap[root.spouse][0]];
+                        self.addLeftFamily(p)
+                    }
+                    left.append("img")
+                        .attr("src", self.rootPath + root.spouse + ".jpg")
                 }
             }
+/*
             if(root.spouse && this.parentMap[root.spouse]) {
                 let p = this.idMap[this.parentMap[root.spouse][0]];
                 console.log("Checking gender forspouse of " + root.id);
                 if(self.idMap[root.spouse].gender == "M") {
                     this.addLeftFamily(p);
+                    left.append("img")
+                        .attr("src", self.rootPath + root.spouse + ".jpg");
                 } else {
                     this.addrightFamily(p);
+                    right.append("img")
+                        .attr("src", self.rootPath + root.spouse + ".jpg");
                 }
-            }
+            }*/
+
         } else {
             middle.append("img")
                 .attr("src",this.rootPath + id + ".jpg");
@@ -90,7 +123,7 @@ class FamilyView {
                     return self.rootPath + parent.familypath;
                 }
                 else {
-                    return self.altFamily;
+                    return self.rootPath + parent.id + ".jpg";
                 }
             })
             .on('click', function() {
@@ -107,7 +140,7 @@ class FamilyView {
                     return self.rootPath + parent.familypath;
                 }
                 else {
-                    return self.altFamily;
+                    return self.rootPath + parent.id + ".jpg";
                 }
             })
             .on('click', function() {
