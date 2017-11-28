@@ -153,12 +153,7 @@ class FamilyView {
         let left = d3.select("#left");
         left.append("img")
             .attr("src",function() {
-                if(self.imageExists(id.id)) {
-                    return self.rootPath + id.id + ".jpg"
-                }
-                else {
-                    return self.altBoy;
-                }
+                return self.rootPath + id.id + ".jpg"
             })
             .on('click', function() {
                 self.loadView(id.id);
@@ -169,12 +164,7 @@ class FamilyView {
         let right = d3.select("#right");
         right.append("img")
             .attr("src",function() {
-                if(self.imageExists(id.id)) {
-                    return self.rootPath + id.id + ".jpg"
-                }
-                else {
-                    return self.altGirl;
-                }
+                return self.rootPath + id.id + ".jpg"
             })
             .on('click', function() {
                 self.loadView(id.id);
