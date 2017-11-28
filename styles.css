@@ -97,11 +97,28 @@ img:hover {
     border-width: 1px;
     border-color: #a3a3a3;
 }
- body {
-     background-color: lightgrey;
- }
+ /*body {*/
+     /*background-color: lightgrey;*/
+ /*}*/
 
 .line {
     fill: none;
     stroke-width: 1px;
+}
+
+.links {
+    fill: none;
+    stroke: #9c9c9c;
+    stroke-width: 1px;
+}
+
+.spouselinks {
+    fill: none;
+    stroke: #757575;
+    stroke-width: 2px;
+}
+
+.selectedCircle {
+    stroke-width: 3px;
+    stroke: #636e84;
 }
