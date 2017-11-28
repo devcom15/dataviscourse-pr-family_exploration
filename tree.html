@@ -6,18 +6,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css"/>
     <title>Tree MockUp</title>
+<style type="text/css">
+    div.tree_tooltip {   
+    position: absolute;         
+    text-align: center;         
+    width: 120px;                    
+    height: 30px;                   
+    padding: 2px;               
+    font: 12px sans-serif;      
+    background: lightsteelblue; 
+    border: 0px;        
+    border-radius: 8px;         
+    pointer-events: none;           
+}
+</style>
 </head>
 <body>
     <header>
         <!--<h1>Tree/Brush/Stats MockUp</h1>-->
     </header>
 
-
     <div id="birth-year-selection">
     </div>
 
     <div id="tree">
     </div>
+    <div id="ttp" class="tree_tooltip" style="opacity: 0"></div>
 
     <script type="application/javascript" src="js/tree.js"></script>
     <script type="application/javascript" src="js/familyview.js"></script>
