@@ -21,6 +21,7 @@
     height: 48%;
     margin: 1px;
     display: inline-block;
+    float:left;
 }
 .middle {
     width: 48%;
@@ -33,6 +34,7 @@
     height: 48%;
     margin: 1px;
     display: inline-block;
+    float:right;
 }
 .bottom {
     text-align:center;
@@ -208,3 +210,19 @@ div.tree_tooltip {
     pointer-events: none;
 }
 
+svg {
+    width:600px;
+    float:left;
+}
+
+.parent {
+    position:relative;
+    top:18px;
+}
+
+.info {
+    text-align:center;
+    list-style:none;
+    font-size:200%;
+    font-weight:bold;
+}
