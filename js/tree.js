@@ -416,7 +416,7 @@ class tree{
             genBlockCircles.exit().remove();
 
 
-
+            
             genBlockCircles.enter().append('circle').merge(genBlockCircles)
                 .attr('cx', (d,i) => (i * 16))
                 .attr('cy', (i * 40) + 13)
@@ -424,6 +424,28 @@ class tree{
                 .attr('id', d => d.id)
                 .attr('transform', 'translate(120,0)')
                 .on('click', d => circleEvent(d.id, thisObject))
+                .on('mouseover', function(d){
+                    console.log(d)
+                    if (d.death == null){
+                        var testo = d.firstname + " " + d.lastname + ", " + d.birthdate + "-" + "Present";
+                    } else{
+                        var testo = d.firstname + " " + d.lastname + ", " + d.birthdate + "-" + d.death;
+                    }
+
+                    d3.select('#ttp')
+                        .style("opacity", .9)
+                        .style("left", (d3.event.pageX) + "px")     
+                        .style("top", (d3.event.pageY - 28) + "px")
+                        .text(testo);
+                    })
+                .on('mouseout', function(d){
+                    console.log("MOUSEOVER")
+                    d3.select('#ttp')
+                        .style("opacity", .0)
+                        .style("left", (d3.event.pageX) + "px")     
+                        .style("top", (d3.event.pageY - 28) + "px")
+                        .text('ciao');
+                    })
                 .style('fill', d => {
                     if(d.gender === 'M')
                     {

@@ -1,56 +1,63 @@
-#left {
+#familyview {
+    width:800px;
+    height:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.left {
     width: 24%;
     height: 48%;
-    margin: 5px;
+    margin: 1px;
     display: inline-block;
 }
-#middle {
+.middle {
     width: 48%;
     height: 48%;
-    margin: 5px;
+    margin: 1px;
     display: inline-block;
 }
-#right {
+.right {
     width: 24%;
     height: 48%;
-    margin: 5px;
+    margin: 1px;
     display: inline-block;
 }
-#bottom {
+.bottom {
     text-align:center;
     width: 98%;
     height: 40%;
     display: inline-block;
 }
-#left > img {
+.left > img {
     width:80%;
     height:40%;
     float:left;
     margin:10%;
 }
 
-#right > img {
+.right > img {
     width:80%;
     height:40%;
     float:left;
     margin:10%;
 }
 
-#middle > img {
+.middle > img {
     width:80%;
     height:80%;
     float:left;
     margin:10%;
 }
 
-#bottom > img {
-    width:150px;
-    height:150px;
+.bottom img {
+    width:120px;
+    height:120px;
     float:left;
     margin:20px;
 }
 
-img:hover {
+img:not(.unclickable):hover {
     opacity: 0.6;
     cursor:pointer;
 }
@@ -112,13 +119,53 @@ img:hover {
     border-width: 1px;
     border-color: #a3a3a3;
 }
- /*body {*/
-     /*background-color: lightgrey;*/
- /*}*/
+ #familyview {
+     background-color: lightgrey;
+ }
 
 .line {
     fill: none;
     stroke-width: 1px;
+}
+
+#addmargin{
+    margin-top:110%;
+}
+
+
+.text{
+    font-family: "URW Chancery L",cursive;
+}
+
+.middle .text {
+    position: relative;
+    top:-378px;
+    font-size:140%;
+}
+
+.childtext {
+    font-family: "URW Chancery L",cursive;
+    position:relative;
+    top:18px;
+}
+
+.child{
+    width:150px;
+    height:150px;
+    float:left;
+}
+
+.singleperson {
+    height:1px;
+    position:relative;
+    top:-197px;
+}
+
+.sidefamily {
+    height:1px;
+    position:relative;
+    top:-192px;
+    font-size:75%
 }
 
 .links {
@@ -137,3 +184,4 @@ img:hover {
     stroke-width: 3px;
     stroke: #636e84;
 }
+
