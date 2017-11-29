@@ -1,13 +1,14 @@
 class tree{
 
-    constructor(idMap, parentMap, mapView)
+    constructor(idMap, parentMap, famView)
     {
         this.idMap = idMap;
         this.parentMap = parentMap;
         this.generations = [];
         this.dataToDisplay = [];
 
-        this.map = mapView;
+        this.famView = famView;
+        //this.map = mapView;
 
         this.maxMales = 20;
         this.maxFemales = 30;
@@ -427,7 +428,7 @@ class tree{
                 .attr('r', 8)
                 .attr('id', d => d.id)
                 .attr('transform', 'translate(120,0)')
-                .on('click', d => circleEvent(d.id, thisObject))
+                .on('click', d => circleEvent(d.id, thisObject,true))
                 .on('mouseover', function(d){
                     console.log(d)
                     if (d.death == null){
@@ -468,8 +469,12 @@ class tree{
         //this.dataToDisplay = this.generations.slice();
     }
 
-    circleOnClick(id, treeObject)
+    circleOnClick(id, treeObject, callFam)
     {
+        if(treeObject.famView && callFam) {
+            treeObject.famView.loadView(id, true);
+        }
+
         let member = treeObject.getMemberEntry(id);
 
         console.log('MemberClicked: ', member);

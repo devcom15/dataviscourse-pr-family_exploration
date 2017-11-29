@@ -1,8 +1,7 @@
 class FamilyView {
-    constructor(idMap, parentMap, treeView) {
+    constructor(idMap, parentMap) {
         this.idMap = idMap;
         this.parentMap = parentMap;
-        this.treeView = treeView;
         this.rootPath = "/data/photos/";
         if(!this.imageExists("clintonr87")) {
             this.rootPath = "/dataviscourse-pr-family_exploration" + this.rootPath;
@@ -14,12 +13,21 @@ class FamilyView {
         this.loadView("clintonr87");
     }
 
+    setTree(treeView) {
+        this.treeView = treeView;
+    }
+
     loadView(id) {
+        console.log(this.treeView);
+        if(this.treeView) {
+            this.treeView.circleOnClick(id,this.treeView, false)
+        }
         console.log("Starting loadview with id: " + id);
         let self = this;
         d3.selectAll(".child").remove();
         d3.selectAll("img").remove();
         d3.selectAll(".text").remove();
+        d3.selectAll("ul").remove();
         let root = this.idMap[id];
 
         let middle = d3.select(".middle");
@@ -165,6 +173,10 @@ class FamilyView {
         middle.append("img")
             .attr("src", this.rootPath + id + ".jpg");
 
+        middle.append("div")
+            .classed("text",true)
+            .text(root.firstname + " " + root.lastname);
+
         if(root.familypath) {
             middle.select("img")
                 .on('click', function() {
@@ -187,6 +199,14 @@ class FamilyView {
             this.addParent(p2);
         }
 
+        let ul = bottom.append("ul")
+            .classed("info",true);
+        ul.append("li")
+            .text("Born: " + root.birthdate);
+        ul.append("li")
+            .text("Hobby: " + root.hobby);
+        ul.append("li")
+            .text("Location: " + root.city + ", " + root.state)
 
     }
 
@@ -258,6 +278,12 @@ class FamilyView {
     addLeftParent(id) {
         let self = this;
         let left = d3.select(".left");
+
+        left.append("div")
+            .classed("text",true)
+            .classed("parent",true)
+            .text(id.firstname);
+
         left.append("img")
             .attr("src",function() {
                 return self.rootPath + id.id + ".jpg"
@@ -269,6 +295,12 @@ class FamilyView {
     addRightParent(id) {
         let self = this;
         let right = d3.select(".right");
+
+        right.append("div")
+            .classed("text",true)
+            .classed("parent",true)
+            .text(id.firstname);
+
         right.append("img")
             .attr("src",function() {
                 return self.rootPath + id.id + ".jpg"
