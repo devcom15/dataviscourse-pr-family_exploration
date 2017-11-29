@@ -472,6 +472,8 @@ class tree{
 
     circleOnClick(id, treeObject, callFam)
     {
+        // console.log("CALLFAM:")
+        // console.log(callFam)
         if(treeObject.famView && callFam) {
             treeObject.famView.loadView(id, true);
         }

@@ -1,7 +1,7 @@
 class USmap{
   constructor(){
-    this.svg = d3.select("svg").attr('transform', 'translate(80,-30)');
-    self.data = null;
+    this.svg = d3.select("svg").attr("id", "USsvg").attr('transform', 'translate(80,-30)');
+    this.tree = null;
     this.width = 480
     this.height = 300
     this.tooltip = d3.select("body").append("div").attr('id', 'mapdiv')
@@ -15,10 +15,13 @@ class USmap{
       .style("border-radius","8px")  
       .style("background", "lightsteelblue")
       .style("visibility", "hidden");
-    this.draw_map()
+    //this.draw_map()
   }
 
-
+  add_tree(treeObj){
+    this.tree = treeObj;
+    this.draw_map()
+  }
   draw_map(){
     function map_scale(scaleFactor, width, height ) {
       return d3.geoTransform({
@@ -31,6 +34,7 @@ class USmap{
     let svg = this.svg
     let svg_width = this.width
     let svg_height = this.height
+    var treeObj = this.tree
     d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
       if (error) throw error;
       svg.append("g")
@@ -46,8 +50,17 @@ class USmap{
 
       svg.selectAll("path").attr('fill', '#eeeeee');
 
+      var treeJson = treeObj
       d3.json('data/clint_family.json', function(error, data) {
-      
+        
+        var treeFam = treeJson
+        function on_click(d, treeObj){
+          circles = d3.select("#USsvg").selectAll('circle')
+          circles.attr('fill', 'red')
+            .style('opacity', 0.5)
+          circles.filter(function(dat) { return dat.id === d.id }).attr('fill', 'yellow').style('opacity', 1);
+          treeFam.circleOnClick(d.id, treeFam, true)
+        }
         let projection = d3.geoAlbersUsa().scale(643).translate([svg_width/2, svg_height/2]);
 
         let circles = svg.selectAll('circle').data(data);
@@ -61,7 +74,6 @@ class USmap{
           .attr('fill', 'red')
           .style('opacity', 0.5)
           .on('mouseover', function(d){
-            console.log("MOUSEOVER MAP CIRCLE")
             let tooltip = d3.select('#mapdiv');
             tooltip.text(d.firstname + ' ' + d.lastname + ", " + d.city);
             tooltip.append('div')
@@ -76,6 +88,7 @@ class USmap{
           })
           .on("mousemove", function(){return d3.select('#mapdiv').style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
           .on('mouseout', function(){return d3.select('#mapdiv').style("visibility", "hidden");})
+          .on("click", function(d){on_click(d, treeFam)})
           .transition().duration(2000).attr('r', 8);
       });
     });
@@ -88,8 +101,14 @@ class USmap{
         new_data.push(data[i][j])
       }
     }
-    console.log("Update");
-    console.log(new_data);
+    var treeFam = this.tree
+    function on_click(d, treeObj){
+      circles = d3.select("#USsvg").selectAll('circle')
+      circles.attr('fill', 'red')
+        .style('opacity', 0.5)
+      circles.filter(function(dat) { return dat.id === d.id }).attr('fill', 'yellow').style('opacity', 1);
+      treeFam.circleOnClick(d.id, treeFam, true)
+    }
     let projection = d3.geoAlbersUsa().scale(643).translate([this.width/2, this.height/2]);
     let circles = this.svg.selectAll('circle').data(new_data);
     circles.exit().remove();
@@ -102,7 +121,6 @@ class USmap{
       .attr('fill', 'red')
       .style('opacity', 0.5)
       .on('mouseover', function(d){
-        console.log("MOUSEOVER MAP CIRCLE")
         let tooltip = d3.select('#mapdiv');
         tooltip.text(d.firstname + ' ' + d.lastname + ", " + d.city);
         tooltip.append('div')
@@ -117,6 +135,7 @@ class USmap{
       })
       .on("mousemove", function(){return d3.select('#mapdiv').style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
       .on('mouseout', function(){return d3.select('#mapdiv').style("visibility", "hidden");})
+      .on("click", function(d){on_click(d, treeFam)})
       .transition().duration(2000).attr('r', 8)
   }
 
@@ -139,50 +158,3 @@ class USmap{
     circles.filter(function(d) { return d.id === id }).raise()
   }
 }
-// var svg = d3.select("svg").attr('transform', 'translate(80,0)');
-// var svg_width = 960/2;
-// var svg_height = 600/2;
-
-// function map_scale(scaleFactor, width, height ) {
-//   return d3.geoTransform({
-//     point: function(x, y) {
-//          this.stream.point((x * scaleFactor), (y  * scaleFactor));
-//     }
-//   });
-//  }
-// var path = d3.geoPath().projection(map_scale(0.5, svg_width, svg_height));
-
-// d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
-//   if (error) throw error;
-
-  
-//   svg.append("g")
-//     .attr("class", "states")
-//       .selectAll("path")
-//       .data(topojson.feature(us, us.objects.states).features)
-//       .enter().append("path")
-//       .attr("d", path);
-
-//     svg.append("path")
-//       .attr("class", "state-borders")
-//       .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; })));
-
-//     svg.selectAll("path").attr('fill', '#eeeeee');
-    
-//     d3.json('data/clint_family.json', function(error, data) {
-    	
-    	
-// 	    var projection = d3.geoAlbersUsa().scale(643).translate([svg_width/2, svg_height/2]);
-
-//     	let circles = svg.selectAll('circle').data(data);
-// 	    circles.exit().remove();
-//     	circles.enter().append('circle').merge(circles)
-//     	.attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))
-//     	.attr('cx', d => (projection([+d.longitude, +d.latitude])[0]))
-//     	.attr('r', 5)
-//     	.attr('stroke', "black")
-//     	.attr('stroke-width', 1)
-//     	.attr('fill', 'red')
-//     	.attr('opacity', 0.5)
-//   	});
-// });

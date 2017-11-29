@@ -22,6 +22,7 @@ d3.json('data/clint_family.json',function(data){
     mapView = new USmap()
     famView = new FamilyView(idMap,parentMap);
     treeView = new tree(idMapArray, parentMap, mapView, famView);
+    mapView.add_tree(treeView);
     window.setTimeout(famView.setTree(treeView),1000);
 
 });
