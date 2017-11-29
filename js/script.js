@@ -15,10 +15,11 @@ d3.json('data/clint_family.json',function(data){
         });
     });
 
-    // let mapView = new mapView(idMapArray)
+    let mapView = null
     let treeView = null;
     let famView = null;
 
+    mapView = new USmap()
     treeView = new tree(idMapArray, parentMap, mapView);
     famView = new FamilyView(idMap,parentMap, treeView);
 

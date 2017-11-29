@@ -199,7 +199,7 @@ class tree{
         var reDrawData = this.dataToDisplay;
 
         //console.log(reDrawData);
-
+        var US = this.map
         function brushed() {
             var selection = d3.event.selection;
 
@@ -220,6 +220,7 @@ class tree{
             //console.log('JustBefore Draw', reDrawData);
 
             reDraw(filteredData, thisObject);
+            US.update(filteredData);
         }
 
         var brush = d3.brushX().extent([[100,3],[581,103]]).on("end", brushed);
