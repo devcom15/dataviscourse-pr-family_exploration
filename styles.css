@@ -55,6 +55,21 @@ img:hover {
     cursor:pointer;
 }
 
+#leftView{
+    /*margin: 5px;*/
+    float:left;
+    display: inline-block;
+    width: 500px;
+    height: 1000px;
+}
+
+#rightView{
+    margin: 5px;
+    display: inline-block;
+    width: 500px;
+    height: 1000px;
+}
+
 #bar-chart {
     margin-left: 1000px;
     width: 1000px;
