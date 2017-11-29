@@ -1,9 +1,20 @@
 class USmap{
   constructor(){
-    this.svg = d3.select("svg").attr('transform', 'translate(80,0)');
+    this.svg = d3.select("svg").attr('transform', 'translate(80,-30)');
     self.data = null;
     this.width = 480
     this.height = 300
+    this.tooltip = d3.select("body").append("div").attr('id', 'mapdiv')
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("width","60px")                  
+      .style("height","60px")                 
+      .style("padding","2px")             
+      .style("font","12px sans-serif")
+      .style("border","0px")      
+      .style("border-radius","8px")  
+      .style("background", "lightsteelblue")
+      .style("visibility", "hidden");
     this.draw_map()
   }
 
@@ -41,14 +52,31 @@ class USmap{
 
         let circles = svg.selectAll('circle').data(data);
         circles.exit().remove();
-        circles.enter().append('circle').merge(circles).transition().duration(2000)
+        circles.enter().append('circle').merge(circles)
           .attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))  //+(svg_height/2))
           .attr('cx', d => (projection([+d.longitude, +d.latitude])[0])) //+(svg_width/2))
-          .attr('r', 8)
+          .attr('r', 0)
           .attr('stroke', "black")
           .attr('stroke-width', 1)
           .attr('fill', 'red')
           .style('opacity', 0.5)
+          .on('mouseover', function(d){
+            console.log("MOUSEOVER MAP CIRCLE")
+            let tooltip = d3.select('#mapdiv');
+            tooltip.text(d.firstname + ' ' + d.lastname + ", " + d.city);
+            tooltip.append('div')
+                  .attr('id', 'tipmap')
+                  .attr('class', 'map');
+            let map2 = L.map('tipmap').setView([d.latitude, d.longitude], 7);
+            L.tileLayer(
+             'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
+              let m2 = new L.Marker([d.latitude, d.longitude]);
+              map2.addLayer(m2);
+              tooltip.style("visibility", "visible");
+          })
+          .on("mousemove", function(){return d3.select('#mapdiv').style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+          .on('mouseout', function(){return d3.select('#mapdiv').style("visibility", "hidden");})
+          .transition().duration(2000).attr('r', 8);
       });
     });
   }
@@ -73,6 +101,22 @@ class USmap{
       .attr('stroke-width', 1)
       .attr('fill', 'red')
       .style('opacity', 0.5)
+      .on('mouseover', function(d){
+        console.log("MOUSEOVER MAP CIRCLE")
+        let tooltip = d3.select('#mapdiv');
+        tooltip.text(d.firstname + ' ' + d.lastname + ", " + d.city);
+        tooltip.append('div')
+              .attr('id', 'tipmap')
+              .attr('class', 'map');
+        let map2 = L.map('tipmap').setView([d.latitude, d.longitude], 7);
+        L.tileLayer(
+         'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
+          let m2 = new L.Marker([d.latitude, d.longitude]);
+          map2.addLayer(m2);
+          tooltip.style("visibility", "visible");
+      })
+      .on("mousemove", function(){return d3.select('#mapdiv').style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+      .on('mouseout', function(){return d3.select('#mapdiv').style("visibility", "hidden");})
       .transition().duration(2000).attr('r', 8)
   }
 

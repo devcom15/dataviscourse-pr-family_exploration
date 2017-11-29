@@ -160,6 +160,7 @@ class FamilyView {
     }
 
     showIndividual(id) {
+        console.log("Show individual")
         let self = this;
         let root = this.idMap[id];
 
