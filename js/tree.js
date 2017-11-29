@@ -36,7 +36,7 @@ class tree{
     {
         this.yearScale = d3.scaleLinear()
             .domain([1865, 2020])
-            .range([0, 350]);
+            .range([0, 480]);
 
         var pixelToYear = d3.scaleLinear()
             .domain([100, 901])
@@ -85,7 +85,7 @@ class tree{
         axisSVG.append('line')
             .attr('x1', 50)
             .attr('y1', 48.7)
-            .attr('x2', 400)
+            .attr('x2', 530)
             .attr('y2', 48.7)
             .attr('stroke', 'black')
             .attr('transform', 'translate(50,1)');
@@ -402,7 +402,7 @@ class tree{
             .attr('x', 100)
             .attr('y', (d,i) => (i * 40))
             .attr('height', 25)
-            .attr('width', 350)
+            .attr('width', 480)
             .classed('generationFrame', true);
 
         treeSVG.append('g').attr('id', 'links');

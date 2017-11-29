@@ -3,6 +3,17 @@
     height:800px;
     margin:auto;
     text-align:center;
+    /*background-color: rgba(198, 198, 198, 0.5);*/
+    background-color: #fdfdfd;
+    border-style:solid;
+    border-color: #a3a3a3;
+    border-width: 1px;
+}
+
+#main{
+    width:1420px;
+    height:1420px;
+    margin:0 auto;
 }
 
 .left {
@@ -66,12 +77,14 @@ img:not(.unclickable):hover {
     /*margin: 5px;*/
     float:left;
     display: inline-block;
-    width: 500px;
+    width: 610px;
     height: 1000px;
 }
 
 #rightView{
-    margin: 5px;
+    float:left;
+    margin-left: 0px;
+    margin-right:0px;
     display: inline-block;
     width: 500px;
     height: 1000px;
@@ -114,14 +127,11 @@ img:not(.unclickable):hover {
     border-color: #a3a3a3;
 }
 
-.treeCircle{
+.treeCircle {
     fill-opacity: .80;
     border-width: 1px;
     border-color: #a3a3a3;
 }
- #familyview {
-     background-color: lightgrey;
- }
 
 .line {
     fill: none;
