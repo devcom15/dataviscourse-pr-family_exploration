@@ -425,7 +425,7 @@ class tree{
             genBlockCircles.enter().append('circle').merge(genBlockCircles)
                 .attr('cx', (d,i) => (i * 20))
                 .attr('cy', (i * 40) + 12)
-                .attr('r', 8)
+                .attr('r', 0)
                 .attr('id', d => d.id)
                 .attr('transform', 'translate(120,0)')
                 .on('click', d => circleEvent(d.id, thisObject,true))
@@ -460,7 +460,8 @@ class tree{
                     {
                         return '#C6ABBD';
                     }
-                });
+                })
+                .transition().duration(2000).attr('r', 8);
                 // .classed('treeCircle', true);
         }
 
@@ -608,10 +609,11 @@ class tree{
                     d3.select('#links').append('line')
                         .attr('x1', cmcX)
                         .attr('y1', cmcY)
-                        .attr('x2', cmcsX)
+                        .attr('x2', cmcX)
                         .attr('y2', cmcsY)
                         .attr('transform', 'translate(120,0)')
-                        .classed('spouselinks', true);
+                        .classed('spouselinks', true)
+                        .transition().duration(2000).attr('x2', cmcsX);
                 }
             }
         }
