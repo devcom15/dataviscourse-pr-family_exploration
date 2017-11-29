@@ -1,7 +1,8 @@
 class FamilyView {
-    constructor(idMap, parentMap) {
+    constructor(idMap, parentMap, treeView) {
         this.idMap = idMap;
         this.parentMap = parentMap;
+        this.treeView = treeView;
         this.rootPath = "/data/photos/";
         if(!this.imageExists("clintonr87")) {
             this.rootPath = "/dataviscourse-pr-family_exploration" + this.rootPath;

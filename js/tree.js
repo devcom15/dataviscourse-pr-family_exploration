@@ -1,11 +1,13 @@
 class tree{
 
-    constructor(idMap, parentMap)
+    constructor(idMap, parentMap, mapView)
     {
         this.idMap = idMap;
         this.parentMap = parentMap;
         this.generations = [];
         this.dataToDisplay = [];
+
+        this.map = mapView;
 
         this.maxMales = 20;
         this.maxFemales = 30;
@@ -39,7 +41,7 @@ class tree{
             .range([0, 480]);
 
         var pixelToYear = d3.scaleLinear()
-            .domain([100, 901])
+            .domain([100, 581])
             .range([1865, 2020]);
 
         this.numOfGenderScale = d3.scaleLinear()
@@ -213,12 +215,14 @@ class tree{
 
             let filteredData = filter(minYearRange, maxYearRange, reDrawData);
 
+
+
             //console.log('JustBefore Draw', reDrawData);
 
             reDraw(filteredData, thisObject);
         }
 
-        var brush = d3.brushX().extent([[100,3],[901,103]]).on("end", brushed);
+        var brush = d3.brushX().extent([[100,3],[581,103]]).on("end", brushed);
 
         axisSVG.append("g").attr("class", "brush").call(brush);
     }
@@ -390,7 +394,7 @@ class tree{
 
         var treeSVG = d3.select("#tree").append('svg')
             .attr('width', 1000)
-            .attr('height', 600)
+            .attr('height', 230)
             .attr('id', 'treeSVG')
             .attr('transform', 'translate(0,0)');
 
@@ -418,9 +422,9 @@ class tree{
 
             
             genBlockCircles.enter().append('circle').merge(genBlockCircles)
-                .attr('cx', (d,i) => (i * 16))
-                .attr('cy', (i * 40) + 13)
-                .attr('r', 6)
+                .attr('cx', (d,i) => (i * 20))
+                .attr('cy', (i * 40) + 12)
+                .attr('r', 8)
                 .attr('id', d => d.id)
                 .attr('transform', 'translate(120,0)')
                 .on('click', d => circleEvent(d.id, thisObject))
@@ -439,7 +443,7 @@ class tree{
                         .text(testo);
                     })
                 .on('mouseout', function(d){
-                    console.log("MOUSEOVER")
+                    console.log("C")
                     d3.select('#ttp')
                         .style("opacity", .0)
                         .style("left", (d3.event.pageX) + "px")     

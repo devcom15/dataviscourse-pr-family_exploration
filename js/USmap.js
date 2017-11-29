@@ -1,4 +1,4 @@
-var svg = d3.select("svg");
+var svg = d3.select("svg").attr('transform', 'translate(80,0)');
 var svg_width = 960/2;
 var svg_height = 600/2;
 // svg.append('rect').attr('x', 0).attr('y', 0).attr('width',svg_width).attr('height', svg_height).attr('fill', 'black');
