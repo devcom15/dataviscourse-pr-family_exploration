@@ -1,8 +1,8 @@
 d3.json('data/clint_family.json',function(data){
     let idMap = {};
-    let parentMap = {}
+    let parentMap = {};
 
-    let idMapArray = []
+    let idMapArray = [];
 
     data.forEach(function(d) {
         idMap[d.id] = d;

@@ -36,10 +36,10 @@ class tree{
     {
         this.yearScale = d3.scaleLinear()
             .domain([1865, 2020])
-            .range([0, 800]);
+            .range([0, 350]);
 
         var pixelToYear = d3.scaleLinear()
-            .domain([50, 800])
+            .domain([100, 901])
             .range([1865, 2020]);
 
         this.numOfGenderScale = d3.scaleLinear()
@@ -51,10 +51,10 @@ class tree{
             .domain([(this.maxAvgMaleAge > this.maxAvgFemaleAge ? this.maxAvgMaleAge : this.maxAvgFemaleAge),
                 (this.minAvgMaleAge > this.minAvgFemaleAge ? this.minAvgMaleAge : this.minAvgFemaleAge)]);
 
-        console.log('maxAVGMaleAge: ', this.maxAvgMaleAge);
-        console.log('minAVGMaleAge: ', this.minAvgMaleAge);
-        console.log('maxAVGFeMaleAge: ', this.maxAvgFemaleAge);
-        console.log('minAVGFeMaleAge: ', this.minAvgFemaleAge);
+        // console.log('maxAVGMaleAge: ', this.maxAvgMaleAge);
+        // console.log('minAVGMaleAge: ', this.minAvgMaleAge);
+        // console.log('maxAVGFeMaleAge: ', this.maxAvgFemaleAge);
+        // console.log('minAVGFeMaleAge: ', this.minAvgFemaleAge);
 
         let genderAxis = d3.axisLeft(this.numOfGenderScale);
 
@@ -65,7 +65,7 @@ class tree{
         let axisSVG = d3.select("#birth-year-selection").append("svg")
             .attr("width", 1000)
             .attr("height", 150)
-            .attr('transform', 'translate(20,0)');
+            .attr('transform', 'translate(0,0)');
 
         //YEAR AXIS
         axisSVG.append("g").attr("width", 900)
@@ -85,7 +85,7 @@ class tree{
         axisSVG.append('line')
             .attr('x1', 50)
             .attr('y1', 48.7)
-            .attr('x2', 850)
+            .attr('x2', 400)
             .attr('y2', 48.7)
             .attr('stroke', 'black')
             .attr('transform', 'translate(50,1)');
@@ -100,7 +100,7 @@ class tree{
             .attr("font-size", "10");
 
         //GENDER LINE GRAPHS
-        console.log(this.maleNumPoints);
+        //console.log(this.maleNumPoints);
 
         var xScale = this.yearScale;
         var yScale = this.numOfGenderScale;
@@ -144,13 +144,13 @@ class tree{
             .attr('stroke', '#C6ABBD')
             .attr('transform', 'translate(100,4)');
 
-        console.log('dataLength: ', this.idMap);
+        //console.log('dataLength: ', this.idMap);
 
         //LABELS
 
 
         axisSVG.append('text').text('Birth Year')
-            .attr("x", 485)
+            .attr("x", 270)
             .attr('y', 130)
             .attr("dy", ".35em")
             .style('font-size', '12px')
@@ -201,7 +201,7 @@ class tree{
         function brushed() {
             var selection = d3.event.selection;
 
-            //console.log(selection);
+            console.log(selection);
 
             let minYearRange = pixelToYear(selection[0]);
 
@@ -209,7 +209,7 @@ class tree{
 
             //console.log('MinYear: ', minYearRange, ' MaxYear: ', maxYearRange)
 
-            console.log('RedrawData', reDrawData);
+            //console.log('RedrawData', reDrawData);
 
             let filteredData = filter(minYearRange, maxYearRange, reDrawData);
 
@@ -386,13 +386,13 @@ class tree{
         d3.select('#tree').select('svg').remove();
 
         var circleEvent = treeObject.circleOnClick;
-        var thisObject = this;
+        var thisObject = treeObject;
 
         var treeSVG = d3.select("#tree").append('svg')
             .attr('width', 1000)
             .attr('height', 600)
             .attr('id', 'treeSVG')
-            .attr('transform', 'translate(20,0)');
+            .attr('transform', 'translate(0,0)');
 
         let generationRects = treeSVG.selectAll('rect').data(drawData);
 
@@ -400,9 +400,9 @@ class tree{
 
         generationRects.enter().append('rect').merge(generationRects)
             .attr('x', 100)
-            .attr('y', (d,i) => (i * 80))
-            .attr('height', 60)
-            .attr('width', 800)
+            .attr('y', (d,i) => (i * 40))
+            .attr('height', 25)
+            .attr('width', 350)
             .classed('generationFrame', true);
 
         treeSVG.append('g').attr('id', 'links');
@@ -418,9 +418,9 @@ class tree{
 
             
             genBlockCircles.enter().append('circle').merge(genBlockCircles)
-                .attr('cx', (d,i) => (i * 35))
-                .attr('cy', (i * 80) + 30)
-                .attr('r', 12)
+                .attr('cx', (d,i) => (i * 16))
+                .attr('cy', (i * 40) + 13)
+                .attr('r', 6)
                 .attr('id', d => d.id)
                 .attr('transform', 'translate(120,0)')
                 .on('click', d => circleEvent(d.id, thisObject))
@@ -459,7 +459,7 @@ class tree{
                 // .classed('treeCircle', true);
         }
 
-        this.drawLinesToSpouses();
+        treeObject.drawLinesToSpouses();
 
         //this.dataToDisplay = this.generations.slice();
     }
@@ -484,38 +484,41 @@ class tree{
 
         treeObject.drawLinesToSpouses();
 
-        console.log('CircleClicked: ', member);
+        //console.log('CircleClicked: ', member);
     }
 
     drawLinesToChildren(member)
     {
         let parentCircle = d3.select('#' + member.id);
 
-        console.log(member.id);
+        //console.log(member.id);
 
         let parentCircleX = parentCircle.attr('cx');
 
-        console.log('ParentCircleX: ', parentCircleX);
+        //console.log('ParentCircleX: ', parentCircleX);
 
         let parentCircleY = parentCircle.attr('cy');
 
-        console.log('ParentCircleY: ', parentCircleY);
+        //console.log('ParentCircleY: ', parentCircleY);
 
         //Draw line to each child
         for(let i = 0; i < member.children.length; i++)
         {
             let childCircle = d3.select('#' + member.children[i]);
 
-            let childCircleX = childCircle.attr('cx');
-            let childCircleY = childCircle.attr('cy');
+            if(!childCircle.empty()) {
 
-            d3.select('#links').append('line')
-                .attr('x1', parentCircleX)
-                .attr('y1', parentCircleY)
-                .attr('x2', childCircleX)
-                .attr('y2', childCircleY)
-                .attr('transform', 'translate(120,0)')
-                .classed('links', true);
+                let childCircleX = childCircle.attr('cx');
+                let childCircleY = childCircle.attr('cy');
+
+                d3.select('#links').append('line')
+                    .attr('x1', parentCircleX)
+                    .attr('y1', parentCircleY)
+                    .attr('x2', childCircleX)
+                    .attr('y2', childCircleY)
+                    .attr('transform', 'translate(120,0)')
+                    .classed('links', true);
+            }
 
         }
 
@@ -524,7 +527,7 @@ class tree{
     drawLinesToParents(member, treeObject)
     {
         if (treeObject.parentMap[member.id]) {
-            console.log(treeObject.parentMap[member.id]);
+            //console.log(treeObject.parentMap[member.id]);
 
             let parents = []
             parents.push(treeObject.parentMap[member.id][0]);
@@ -547,16 +550,19 @@ class tree{
             {
                 let parentCircle = d3.select('#' + parents[i]);
 
-                let parentCircleX = parentCircle.attr('cx');
-                let parentCircleY = parentCircle.attr('cy');
+                if(!parentCircle.empty()) {
 
-                d3.select('#links').append('line')
-                    .attr('x1', parentCircleX)
-                    .attr('y1', parentCircleY)
-                    .attr('x2', childCircleX)
-                    .attr('y2', childCircleY)
-                    .attr('transform', 'translate(120,0)')
-                    .classed('links', true);
+                    let parentCircleX = parentCircle.attr('cx');
+                    let parentCircleY = parentCircle.attr('cy');
+
+                    d3.select('#links').append('line')
+                        .attr('x1', parentCircleX)
+                        .attr('y1', parentCircleY)
+                        .attr('x2', childCircleX)
+                        .attr('y2', childCircleY)
+                        .attr('transform', 'translate(120,0)')
+                        .classed('links', true);
+                }
             }
         }
         else
@@ -573,13 +579,13 @@ class tree{
 
             let currentMemberCircle = d3.select('#' + this.idMap[i].id);
 
-            if(currentMember.spouse !== null)
+            if(currentMember.spouse !== null && !currentMemberCircle.empty())
             {
-                console.log(currentMember.spouse);
+                //console.log(currentMember.spouse);
 
                 let currentMemberSpouseCircle = d3.select('#' + currentMember.spouse);
 
-                console.log(currentMemberSpouseCircle);
+                //console.log(currentMemberSpouseCircle);
 
                 if(!currentMemberSpouseCircle.empty()) {
 
@@ -651,7 +657,7 @@ class tree{
             }
         }
 
-        console.log(this.generations[0]);
+        //console.log(this.generations[0]);
 
         //console.log('generation 0: ', this.generations[0])
 
@@ -778,7 +784,7 @@ class tree{
 
 
 
-        console.log(this.generations);
+        //console.log(this.generations);
 
         this.dataToDisplay = this.generations.slice();
 

@@ -9,16 +9,34 @@
 </head>
 <body style="text-align:center">
 <div>
-    <div id="familyview" style="width:1200px;height:1200px; margin:auto; text-align:center;">
-        <div class="left">
+    <div id ="leftView">
+        <div id="treeView">
+            <div id="birth-year-selection">
+            </div>
+
+            <div id="tree">
+            </div>
         </div>
-        <div class="middle">
+        <div id ="mapView">
+            <svg width="960" height="600" fill="none" stroke="#000" stroke-linejoin="round" stroke-linecap="round" id='USmap'></svg>
         </div>
-        <div class="right">
+    </div>
+
+    <div id="rightView">
+        <div id="familyview">
+            <div class="left">
+            </div>
+            <div class="middle">
+            </div>
+            <div class="right">
+            </div>
+            <div class="bottom"></div>
         </div>
-        <div class="bottom"></div>
     </div>
 </div>
+<script src="https://unpkg.com/topojson-client@3"></script>
+<script type="application/javascript" src="js/USmap.js"></script>
+<script type="application/javascript" src="js/tree.js"></script>
 <script type="application/javascript" src="js/familyview.js"></script>
 <script type="application/javascript" src="js/script.js"></script>
 </body>
