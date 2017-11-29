@@ -1,6 +1,6 @@
 class tree{
 
-    constructor(idMap, parentMap, famView)
+    constructor(idMap, parentMap, mapView, famView)
     {
         this.idMap = idMap;
         this.parentMap = parentMap;
@@ -8,7 +8,7 @@ class tree{
         this.dataToDisplay = [];
 
         this.famView = famView;
-        //this.map = mapView;
+        this.map = mapView;
 
         this.maxMales = 20;
         this.maxFemales = 30;
