@@ -59,8 +59,6 @@ class USmap{
         new_data.push(data[i][j])
       }
     }
-    console.log('Update chiamato!')
-    console.log(new_data)
     let projection = d3.geoAlbersUsa().scale(643).translate([this.width/2, this.height/2]);
     let circles = this.svg.selectAll('circle').data(new_data);
     circles.exit().remove();
@@ -72,6 +70,25 @@ class USmap{
       .attr('stroke-width', 1)
       .attr('fill', 'red')
       .attr('opacity', 0.5)
+  }
+
+  tree_clicked(id){
+    function circle_color(d, selected) {
+      if (d.id === selected){
+        return 'yellow'
+      }
+      return 'red'
+    }
+    function circle_opacity(d, selected){
+      if (d.id === selected){
+        return 1
+      }
+      return 0.5
+    }
+    let circles = this.svg.selectAll('circle')
+      .attr('fill', d => circle_color(d, id))
+      .attr('opacity', d => circle_opacity(d, id))
+    circles.filter(function(d) { return d.id === id }).raise()
   }
 }
 // var svg = d3.select("svg").attr('transform', 'translate(80,0)');

@@ -411,7 +411,7 @@ class tree{
             .classed('generationFrame', true);
 
         treeSVG.append('g').attr('id', 'links');
-
+        // let US = this.map
         for(let i = 0; i < drawData.length; i++)
         {
             //console.log(drawData);
@@ -421,7 +421,6 @@ class tree{
             genBlockCircles.exit().remove();
 
 
-            
             genBlockCircles.enter().append('circle').merge(genBlockCircles)
                 .attr('cx', (d,i) => (i * 20))
                 .attr('cy', (i * 40) + 12)
@@ -488,6 +487,7 @@ class tree{
         //treeObject.drawTree(treeObject.dataToDisplay);
 
         treeObject.drawLinesToSpouses();
+        treeObject.map.tree_clicked(id)
 
         //console.log('CircleClicked: ', member);
     }
