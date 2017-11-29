@@ -11,8 +11,8 @@
 }
 
 #main{
-    width:1420px;
-    height:1420px;
+    width:1415px;
+    height:800px;
     margin:0 auto;
 }
 
@@ -80,7 +80,7 @@ img:not(.unclickable):hover {
     float:left;
     display: inline-block;
     width: 610px;
-    height: 1000px;
+    height: 800px;
 }
 
 #rightView{
@@ -89,7 +89,7 @@ img:not(.unclickable):hover {
     margin-right:0px;
     display: inline-block;
     width: 500px;
-    height: 1000px;
+    height: 700px;
 }
 
 #bar-chart {
