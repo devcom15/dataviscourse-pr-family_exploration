@@ -1,6 +1,7 @@
 class USmap{
   constructor(){
     this.svg = d3.select("svg").attr('transform', 'translate(80,0)');
+    self.data = null;
     this.width = 480
     this.height = 300
     this.draw_map()
@@ -40,14 +41,14 @@ class USmap{
 
         let circles = svg.selectAll('circle').data(data);
         circles.exit().remove();
-        circles.enter().append('circle').merge(circles)
+        circles.enter().append('circle').merge(circles).transition().duration(2000)
           .attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))  //+(svg_height/2))
           .attr('cx', d => (projection([+d.longitude, +d.latitude])[0])) //+(svg_width/2))
-          .attr('r', 7)
+          .attr('r', 8)
           .attr('stroke', "black")
           .attr('stroke-width', 1)
           .attr('fill', 'red')
-          .attr('opacity', 0.5)
+          .style('opacity', 0.5)
       });
     });
   }
@@ -59,17 +60,20 @@ class USmap{
         new_data.push(data[i][j])
       }
     }
+    console.log("Update");
+    console.log(new_data);
     let projection = d3.geoAlbersUsa().scale(643).translate([this.width/2, this.height/2]);
     let circles = this.svg.selectAll('circle').data(new_data);
     circles.exit().remove();
     circles.enter().append('circle').merge(circles)
       .attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))  //+(svg_height/2))
       .attr('cx', d => (projection([+d.longitude, +d.latitude])[0])) //+(svg_width/2))
-      .attr('r', 7)
+      .attr('r', 0)
       .attr('stroke', "black")
       .attr('stroke-width', 1)
       .attr('fill', 'red')
-      .attr('opacity', 0.5)
+      .style('opacity', 0.5)
+      .transition().duration(2000).attr('r', 8)
   }
 
   tree_clicked(id){
@@ -87,7 +91,7 @@ class USmap{
     }
     let circles = this.svg.selectAll('circle')
       .attr('fill', d => circle_color(d, id))
-      .attr('opacity', d => circle_opacity(d, id))
+      .style('opacity', d => circle_opacity(d, id))
     circles.filter(function(d) { return d.id === id }).raise()
   }
 }
