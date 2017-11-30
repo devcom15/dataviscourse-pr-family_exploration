@@ -496,7 +496,7 @@
     "longitude": "-111.741117",
     "state": "UT",
     "spouse": "adas39",
-    "familypath":null,
+    "familypath":"hank_ada_family.jpg",
     "children": [],
     "death": null
   },
@@ -528,7 +528,7 @@
     "latitude": "45.6387281",
     "longitude": "-122.6614861",
     "spouse": "donp41",
-    "familypath":null,
+    "familypath":"don_ann_family.jpg",
     "children": [],
     "death": null
   },
@@ -560,7 +560,7 @@
     "latitude": "29.578006",
     "longitude": "-98.689745",
     "spouse": "boydp43",
-    "familypath":null,
+    "familypath":"boyd_loy_family.jpg",
     "children": [],
     "death": null
   },
@@ -591,8 +591,8 @@
     "state": "UT",
     "latitude": "41.077423",
     "longitude": "-111.960727",
-    "spouse": "richard_evelyn_family.jpg",
-    "familypath":null,
+    "spouse": "evelynr47",
+    "familypath":"richard_evelyn_family.jpg",
     "children": [],
     "death": null
   },
@@ -672,7 +672,7 @@
     "latitude": "41.13874",
     "longitude": "-112.066417",
     "spouse": "davidp54",
-    "familypath":null,
+    "familypath":"david_suzanne_family.jpg",
     "children": [],
     "death": null
   },
@@ -688,7 +688,7 @@
     "latitude": "33.572162",
     "longitude": "-112.087966",
     "spouse": "sharonr44",
-    "familypath":null,
+    "familypath":"bradley_sharon_family.jpg",
     "children": [],
     "death": 2006
   },
@@ -704,7 +704,7 @@
     "latitude": "33.572162",
     "longitude": "-112.087966",
     "spouse": "bradleyr41",
-    "familypath":null,
+    "familypath":"bradley_sharon_family.jpg",
     "children": [],
     "death": null
   },
