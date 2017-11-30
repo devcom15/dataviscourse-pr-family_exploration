@@ -15,7 +15,6 @@ class USmap{
       .style("border-radius","8px")  
       .style("background", "lightsteelblue")
       .style("visibility", "hidden");
-    //this.draw_map()
   }
 
   add_tree(treeObj){
@@ -59,15 +58,25 @@ class USmap{
           circles.attr('fill', '#ffa5a5')
             .style('opacity', 0.5)
           circles.filter(function(dat) { return dat.id === d.id }).attr('fill', '#f5ebb2').style('opacity', 1);
-          treeFam.circleOnClick(d.id, treeFam, true)
+          treeFam.circleOnClick(d.id, treeFam, true);
+          let tooltip = d3.select('#mapdiv');
+          tooltip.text(d.firstname + ' ' + d.lastname + ", " + d.city);
+          tooltip.append('div')
+              .attr('id', 'tipmap')
+              .attr('class', 'map');
+        let map2 = L.map('tipmap').setView([d.latitude, d.longitude], 7);
+        L.tileLayer(
+         'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
+          let m2 = new L.Marker([d.latitude, d.longitude]);
+          map2.addLayer(m2);
         }
         let projection = d3.geoAlbersUsa().scale(643).translate([svg_width/2, svg_height/2]);
 
         let circles = svg.selectAll('circle').data(data);
         circles.exit().remove();
         circles.enter().append('circle').merge(circles)
-          .attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))  //+(svg_height/2))
-          .attr('cx', d => (projection([+d.longitude, +d.latitude])[0])) //+(svg_width/2))
+          .attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))
+          .attr('cx', d => (projection([+d.longitude, +d.latitude])[0]))
           .attr('r', 0)
           .attr('stroke', "black")
           .attr('stroke-width', 1)
@@ -103,18 +112,27 @@ class USmap{
     }
     var treeFam = this.tree
     function on_click(d, treeObj){
-      circles = d3.select("#USsvg").selectAll('circle')
+      circles = d3.select("#USsvg").selectAll('circle');
       circles.attr('fill', '#ffa5a5')
-        .style('opacity', 0.5)
+        .style('opacity', 0.5);
       circles.filter(function(dat) { return dat.id === d.id }).attr('fill', '#f5ebb2').style('opacity', 1);
-      treeFam.circleOnClick(d.id, treeFam, true)
+      treeFam.circleOnClick(d.id, treeFam, true);
+      let tooltip = d3.select('#mapdiv');
+        tooltip.text(d.firstname + ' ' + d.lastname + ", " + d.city);
+        tooltip.append('div')
+          .attr('id', 'tipmap')
+          .attr('class', 'map');
+        let map2 = L.map('tipmap').setView([d.latitude, d.longitude], 7);
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
+          let m2 = new L.Marker([d.latitude, d.longitude]);
+          map2.addLayer(m2);
     }
     let projection = d3.geoAlbersUsa().scale(643).translate([this.width/2, this.height/2]);
     let circles = this.svg.selectAll('circle').data(new_data);
     circles.exit().remove();
     circles.enter().append('circle').merge(circles)
-      .attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))  //+(svg_height/2))
-      .attr('cx', d => (projection([+d.longitude, +d.latitude])[0])) //+(svg_width/2))
+      .attr('cy', d => (projection([+d.longitude, +d.latitude])[1]))
+      .attr('cx', d => (projection([+d.longitude, +d.latitude])[0]))
       .attr('r', 0)
       .attr('stroke', "black")
       .attr('stroke-width', 1)
@@ -124,11 +142,10 @@ class USmap{
         let tooltip = d3.select('#mapdiv');
         tooltip.text(d.firstname + ' ' + d.lastname + ", " + d.city);
         tooltip.append('div')
-              .attr('id', 'tipmap')
-              .attr('class', 'map');
+          .attr('id', 'tipmap')
+          .attr('class', 'map');
         let map2 = L.map('tipmap').setView([d.latitude, d.longitude], 7);
-        L.tileLayer(
-         'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
           let m2 = new L.Marker([d.latitude, d.longitude]);
           map2.addLayer(m2);
           tooltip.style("visibility", "visible");
