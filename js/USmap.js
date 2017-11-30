@@ -48,7 +48,7 @@ class USmap{
         .attr("class", "state-borders")
         .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; })));
 
-      svg.selectAll("path").attr('fill', '#eeeeee');
+      svg.selectAll("path").attr('fill', '#f5f5f5');
 
       var treeJson = treeObj
       d3.json('data/clint_family.json', function(error, data) {
@@ -56,9 +56,9 @@ class USmap{
         var treeFam = treeJson
         function on_click(d, treeObj){
           circles = d3.select("#USsvg").selectAll('circle')
-          circles.attr('fill', 'red')
+          circles.attr('fill', '#ffa5a5')
             .style('opacity', 0.5)
-          circles.filter(function(dat) { return dat.id === d.id }).attr('fill', 'yellow').style('opacity', 1);
+          circles.filter(function(dat) { return dat.id === d.id }).attr('fill', '#f5ebb2').style('opacity', 1);
           treeFam.circleOnClick(d.id, treeFam, true)
         }
         let projection = d3.geoAlbersUsa().scale(643).translate([svg_width/2, svg_height/2]);
@@ -71,7 +71,7 @@ class USmap{
           .attr('r', 0)
           .attr('stroke', "black")
           .attr('stroke-width', 1)
-          .attr('fill', 'red')
+          .attr('fill', '#ffa5a5')
           .style('opacity', 0.5)
           .on('mouseover', function(d){
             let tooltip = d3.select('#mapdiv');
@@ -104,9 +104,9 @@ class USmap{
     var treeFam = this.tree
     function on_click(d, treeObj){
       circles = d3.select("#USsvg").selectAll('circle')
-      circles.attr('fill', 'red')
+      circles.attr('fill', '#ffa5a5')
         .style('opacity', 0.5)
-      circles.filter(function(dat) { return dat.id === d.id }).attr('fill', 'yellow').style('opacity', 1);
+      circles.filter(function(dat) { return dat.id === d.id }).attr('fill', '#f5ebb2').style('opacity', 1);
       treeFam.circleOnClick(d.id, treeFam, true)
     }
     let projection = d3.geoAlbersUsa().scale(643).translate([this.width/2, this.height/2]);
@@ -118,7 +118,7 @@ class USmap{
       .attr('r', 0)
       .attr('stroke', "black")
       .attr('stroke-width', 1)
-      .attr('fill', 'red')
+      .attr('fill', '#ffa5a5')
       .style('opacity', 0.5)
       .on('mouseover', function(d){
         let tooltip = d3.select('#mapdiv');
@@ -142,9 +142,9 @@ class USmap{
   tree_clicked(id){
     function circle_color(d, selected) {
       if (d.id === selected){
-        return 'yellow'
+        return '#f5ebb2'
       }
-      return 'red'
+      return '#ffa5a5'
     }
     function circle_opacity(d, selected){
       if (d.id === selected){
