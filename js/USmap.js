@@ -1,6 +1,6 @@
 class USmap{
   constructor(){
-    this.svg = d3.select("svg").attr("id", "USsvg").attr('transform', 'translate(80,-30)');
+    this.svg = d3.select("svg").attr("id", "USsvg").attr('transform', 'translate(100,-10)');
     this.tree = null;
     this.width = 480
     this.height = 300
