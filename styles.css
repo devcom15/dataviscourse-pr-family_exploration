@@ -83,6 +83,7 @@ img:not(.unclickable):hover {
     height: 800px;
 }
 
+
 #rightView{
     float:left;
     margin-left: 0px;
@@ -237,4 +238,39 @@ svg {
 #siteHeader{
     color: #6a6a6a;
 
+}
+
+.headers{
+    color:#6a6a6a;
+}
+
+
+#leftResults{
+    float:left;
+    display: inline-block;
+    margin-right: 100px;
+    margin-left: 10%;
+    width: 500px;
+    height: 800px;
+}
+
+#rightResults{
+    float:left;
+    margin-left: 0px;
+    margin-right:0px;
+    display: inline-block;
+    width: 500px;
+    height: 700px;
+}
+
+#results{
+    width:1415px;
+    height:800px;
+    margin:0 auto;
+    margin-top:50px;
+
+}
+
+.texts{
+    text-align: left;
 }

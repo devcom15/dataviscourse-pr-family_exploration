@@ -36,7 +36,45 @@
             <div class="bottom"></div>
         </div>
     </div>
+
+
 </div>
+
+<div id="results">
+    <div id ="leftResults">
+        <h2 class="headers">Main Results</h2>
+        <p class="texts">This visualization allows us to explore family members and relatives in a way that might be more immersive and enjoyable than your typical family tree.
+            There are three main components to this visualization: the Tree View, the Family and Individual Views, and the Map View. Each of these views are connected so that when the user interacts with any of these three views, the other 2 are also updated.</p>
+
+        <h2 class="headers">Family and Individual Views:</h2>
+        <p class="texts">The Individual view shows us personal information, such as birth year, hobby and location.  On the individual view we also see images of the persons’ two parents in the corners.  Either of these pictures can be clicked to update the view and show the family of the person clicked.</p>
+        <p class="texts">The family view shows a centered couple or family picture at the center, children on the bottom, parents in each of the corners, and individual pictures on the sides.  The individual pictures on the sides can be clicked to go to the individual view of that particular person.  Any other picture can be clicked to update the family view such that the new center becomes a family or couple picture of the person or family that was clicked.  If a child is clicked that has no spouse or children, the view immediately goes to the individual view of that person.</p>
+
+        <h2 class="headers">Tree View:</h2>
+        <p class="texts">The tree view gives us a broader perspective of each family generation and lets us navigate through relatives with more freedom. Selecting any node in the tree will immediately update the display in the family view and draw new links from the selected node. This view also includes statistical information showing average age and gender disparity for any given year. A brush over these line charts exists to select only family members who are alive during a chosen set of years. This will limit the data drawn in the overall visualization</p>
+
+        <h2 class="headers">Map View</h2>
+        <p class="texts">The Map View shows the locations of each family member, or last lived city for those deceased.
+            Hovering over any of the map nodes will trigger a tooltip showing a zoomed in map location and personal data.  Clicking on a circle will also update the Tree and Family view, putting focus on the person clicked.</p>
+        <h2 class="headers">Video Demonstration</h2>
+        <iframe width="500" height="282" src="https://www.youtube.com/embed/WqqqD2ZvtUY" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+    <div id="rightResults">
+        <h2 class="headers">Emergent Story</h2>
+        <p class="texts">Families are a fundamental structure of many societies, cultures and religions. Unfortunately, the memory of the past generations often quickly disappears, dragging into oblivion the facts and the events that shaped the present as we know it.</p>
+        <p class="texts">With this visualization, it is possible to maintain, in an easy way, the records of a family’s past and present generations and the change over time. In this example, we will look at the Rollins family. </p>
+        <p class="texts">Utilizing the Tree View, sequentially expanding the brush from the earliest point on the time line, 1860, and up shows the growth of the family. Interesting to note is the spike in births around 1940 to 1960, which coincides with the post World War II "Baby Boomer Period".</p>
+        <p class="texts">The family view shows information about each family member. In the beginning, when the Rollins family reached the Western United States, the members established their roots and worked in rural places.</p>
+        <p class="texts">Their interests were tied to the jobs that they had. But the interests of the present generations are very different, ranging from computers to music, showing a deep difference in past generations’ educational level and available occupations compared to present Rollins family generations. </p>
+        <p class="texts">But this is not the only difference: if through the brush we select only the first thirty years, the map will show that the whole family was located in Utah. That was a period in which families had the tendency to remain in the same place. It was not uncommon to be born and die, seventy years later, in the same place. </p>
+        <p class="texts">It was also a time when moving by twenty miles was a huge task. But this is not a problem that the present generation faces: selecting the last thirty years with the brush, we can see on the map that the family members have moved, independently from each other, throughout the United States. </p>
+        <p class="texts">Today, some members of the Rollins family live in California, New York and Texas. Families are evolving organisms, whose location, pastimes and livelihoods can change over time.</p>
+    </div>
+</div>
+
+
 <link rel="stylesheet" href="lib/leaflet/leaflet.css"/>
 <script src="lib/leaflet/leaflet.js"></script>
 <script src="https://unpkg.com/topojson-client@3"></script>
