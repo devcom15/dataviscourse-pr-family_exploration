@@ -1,12 +1,14 @@
 # dataviscourse-pr-family_exp
 # DISCOVER YOUR FAMILY
 
-##Project Website
+## Project Website
+
 https://devcom15.github.io/dataviscourse-pr-family_exploration/main.html
 
-##Screen Cast
+## Screen Cast
+
 https://www.youtube.com/watch?v=WqqqD2ZvtUY
 
-##Process Book
-https://devcom15.github.io/dataviscourse-pr-family_exploration/PROCESS_BOOK.pdf
+## Process Book
 
+https://devcom15.github.io/dataviscourse-pr-family_exploration/PROCESS_BOOK.pdf
