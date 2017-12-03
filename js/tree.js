@@ -54,11 +54,6 @@ class tree{
             .domain([(this.maxAvgMaleAge > this.maxAvgFemaleAge ? this.maxAvgMaleAge : this.maxAvgFemaleAge),
                 (this.minAvgMaleAge > this.minAvgFemaleAge ? this.minAvgMaleAge : this.minAvgFemaleAge)]);
 
-        // console.log('maxAVGMaleAge: ', this.maxAvgMaleAge);
-        // console.log('minAVGMaleAge: ', this.minAvgMaleAge);
-        // console.log('maxAVGFeMaleAge: ', this.maxAvgFemaleAge);
-        // console.log('minAVGFeMaleAge: ', this.minAvgFemaleAge);
-
         let genderAxis = d3.axisLeft(this.numOfGenderScale);
 
         let avgLifeAxis = d3.axisLeft(this.avgLifeScale);
@@ -102,9 +97,6 @@ class tree{
             .selectAll("text")
             .attr("font-size", "10");
 
-        //GENDER LINE GRAPHS
-        //console.log(this.maleNumPoints);
-
         var xScale = this.yearScale;
         var yScale = this.numOfGenderScale;
 
@@ -147,11 +139,7 @@ class tree{
             .attr('stroke', '#C6ABBD')
             .attr('transform', 'translate(100,4)');
 
-        //console.log('dataLength: ', this.idMap);
-
         //LABELS
-
-
         axisSVG.append('text').text('Birth Year')
             .attr("x", 270)
             .attr('y', 130)
@@ -199,7 +187,6 @@ class tree{
 
         var reDrawData = this.dataToDisplay;
 
-        //console.log(reDrawData);
         var US = this.map
         function brushed() {
             var selection = d3.event.selection;
@@ -210,15 +197,7 @@ class tree{
 
             let maxYearRange = pixelToYear(selection[1]);
 
-            //console.log('MinYear: ', minYearRange, ' MaxYear: ', maxYearRange)
-
-            //console.log('RedrawData', reDrawData);
-
             let filteredData = filter(minYearRange, maxYearRange, reDrawData);
-
-
-
-            //console.log('JustBefore Draw', reDrawData);
 
             reDraw(filteredData, thisObject);
             US.update(filteredData);
@@ -254,9 +233,6 @@ class tree{
                     deathValue = this.idMap[j].death;
                 }
 
-                //console.log(deathValue);
-
-
                 if(+this.idMap[j].birthdate <= i && this.idMap[j].gender == gender && deathValue > i)
                 {
                     countForYear += 1;
@@ -267,7 +243,6 @@ class tree{
 
             calculatedValues.push(countForYear);
         }
-        //console.log('LinePoints: ', linePoints);
 
         if(gender == 'M')
         {
@@ -308,9 +283,6 @@ class tree{
                     deathValue = this.idMap[j].death;
                 }
 
-                //console.log(deathValue);
-
-
                 if(+this.idMap[j].birthdate <= i && this.idMap[j].gender === gender && deathValue > i)
                 {
                     countForYear += 1;
@@ -331,12 +303,9 @@ class tree{
 
 
         }
-        //console.log('LinePoints: ', linePoints);
 
         if(gender === 'M')
         {
-            //console.log('Mal Calculated Values: ', calculatedValues);
-
             this.maxAvgMaleAge = calculatedValues.reduce(function(a, b) {
                 return Math.max(a, b);});
             this.minAvgMaleAge = calculatedValues.reduce(function(a, b) {
@@ -344,8 +313,6 @@ class tree{
         }
         if(gender === 'F')
         {
-            //console.log('Fem Calculated Values: ', calculatedValues);
-
             this.maxAvgFemaleAge = calculatedValues.reduce(function(a, b) {
                 return Math.max(a, b);});
             this.minAvgFemaleAge = calculatedValues.reduce(function(a, b) {
@@ -357,33 +324,11 @@ class tree{
 
     filterDrawData(minYear, maxYear, data){
 
-        /*var returnArray = data.slice();
-
-        console.log('Data: ', data);
-
-        console.log('Return Array', returnArray);*/
-
         return data.map(d => {
             return d.filter(innerD => {
                 return innerD.birthdate >= minYear && innerD.birthdate <= maxYear;
             });
         });
-
-        /*for(let i = 0; i < returnArray.length; i++)
-        {
-            for(let j = 0; j < returnArray[i].length; j++)
-            {
-                if(!(returnArray[i][j].birthdate >= minYear && returnArray[i][j].birthdate <= maxYear))
-                {
-                    returnArray[i].splice(j, 1);
-                }
-            }
-        }
-
-        //console.log('DataAfterEdit:, ',data);
-
-        return returnArray;*/
-
     }
 
     drawTree(drawData, treeObject)
@@ -412,11 +357,9 @@ class tree{
             .classed('generationFrame', true);
 
         treeSVG.append('g').attr('id', 'links');
-        // let US = this.map
+
         for(let i = 0; i < drawData.length; i++)
         {
-            //console.log(drawData);
-
             let genBlockCircles = treeSVG.append('g').attr('id', 'gen'+i).selectAll('circle').data(drawData[i]);
 
             genBlockCircles.exit().remove();
@@ -462,18 +405,13 @@ class tree{
                     }
                 })
                 .transition().duration(2000).attr('r', 8);
-                // .classed('treeCircle', true);
         }
 
         treeObject.drawLinesToSpouses();
-
-        //this.dataToDisplay = this.generations.slice();
     }
 
     circleOnClick(id, treeObject, callFam)
     {
-        // console.log("CALLFAM:")
-        // console.log(callFam)
         if(treeObject.famView && callFam) {
             treeObject.famView.loadView(id, true);
         }
@@ -492,27 +430,22 @@ class tree{
 
         treeObject.drawLinesToParents(member, treeObject);
 
-        //treeObject.drawTree(treeObject.dataToDisplay);
-
         treeObject.drawLinesToSpouses();
-        treeObject.map.tree_clicked(id)
-
-        //console.log('CircleClicked: ', member);
+        treeObject.map.tree_clicked(id);
     }
 
     drawLinesToChildren(member)
     {
         let parentCircle = d3.select('#' + member.id);
 
-        //console.log(member.id);
+        if(parentCircle.empty())
+        {
+            return;
+        }
 
         let parentCircleX = parentCircle.attr('cx');
 
-        //console.log('ParentCircleX: ', parentCircleX);
-
         let parentCircleY = parentCircle.attr('cy');
-
-        //console.log('ParentCircleY: ', parentCircleY);
 
         //Draw line to each child
         for(let i = 0; i < member.children.length; i++)
@@ -540,7 +473,6 @@ class tree{
     drawLinesToParents(member, treeObject)
     {
         if (treeObject.parentMap[member.id]) {
-            //console.log(treeObject.parentMap[member.id]);
 
             let parents = []
             parents.push(treeObject.parentMap[member.id][0]);
@@ -548,16 +480,14 @@ class tree{
 
             let childCircle = d3.select('#' + member.id);
 
-            //console.log(member.id);
+            if(childCircle.empty())
+            {
+                return;
+            }
 
             let childCircleX = childCircle.attr('cx');
 
-            //console.log('ChildCircleX: ', childCircleX);
-
             let childCircleY = childCircle.attr('cy');
-
-            //console.log('ChildCircleY: ', childCircleY);
-
 
             for(let i = 0; i < parents.length; i++)
             {
@@ -594,11 +524,7 @@ class tree{
 
             if(currentMember.spouse !== null && !currentMemberCircle.empty())
             {
-                //console.log(currentMember.spouse);
-
                 let currentMemberSpouseCircle = d3.select('#' + currentMember.spouse);
-
-                //console.log(currentMemberSpouseCircle);
 
                 if(!currentMemberSpouseCircle.empty()) {
 
@@ -640,25 +566,8 @@ class tree{
     }
 
     buildInitialDataSets() {
-
-        //console.log('idMap: ', this.idMap);
-
-        //console.log('parentMap: ', this.parentMap)
-
-        // loiss72
-        // johns71
-        // charlottep76
-        // levip66
-        // vernab95
-        // clintonb95
-        // bernicer98
-        // jamesr97
-
-
         //build generation 0
         this.generations[0] = [];
-
-        //this.generations[0].push(this.idMap[50]);
 
         let genZeroIds = ['loiss72', 'johns71', 'charlottep76', 'levip66', 'vernab95', 'clintonb95',
             'bernicer98', 'jamesr97'];
@@ -670,13 +579,6 @@ class tree{
                 }
             }
         }
-
-        //console.log(this.generations[0]);
-
-        //console.log('generation 0: ', this.generations[0])
-
-
-        //console.log('gen0info', this.generations[0][0].children);
 
         //build generation 1
         this.generations[1] = [];
@@ -690,8 +592,6 @@ class tree{
                 }
             }
         }
-
-        //console.log('generation 1: ', this.generations[1]);
 
         //build generation 2
         this.generations[2] = [];
@@ -710,8 +610,6 @@ class tree{
                 }
             }
         }
-
-        //console.log('generation 2: ', this.generations[2]);
 
         //build generation 3
         this.generations[3] = [];
@@ -767,7 +665,6 @@ class tree{
 
         this.generations[3] = newGen3;
 
-
         //for each gen, place spouses together
         for(let i = 0; i < this.generations.length; i++)
         {
@@ -788,39 +685,14 @@ class tree{
 
                     this.removeMemberFromList(currentMember.spouse, currentGen);
                 }
-
-
             }
 
             this.generations[i] = newGen;
         }
 
-
-
-
-        //console.log(this.generations);
-
         this.dataToDisplay = this.generations.slice();
 
         this.drawTree(this.dataToDisplay, this);
-        //
-        //identify list of spouses who are not part of the core family line we are analyzing
-        // for(let i = 0; i < this.generations.length; i++)
-        // {
-        //     for(let j = 0; j < this.generations[i].length; j++)
-        //     {
-        //         if(this.generations[i][j].spouse !== null) {
-        //             if (this.getMemberEntry(this.generations[i][j].spouse).id !== -1) {
-        //                 this.generations[i].splice(j + 1, 0, this.getMemberEntry(this.generations[i][j].spouse));
-        //             }
-        //         }
-        //     }
-        // }
-        //
-        // for(let i = 0; i < this.generations.length; i++)
-        // {
-        //     console.log('Generation: ' + i, this.generations[i]);
-        // }
     }
 
 
